@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 const year = new Date().getFullYear()
+console.log(year)
 
 document.querySelectorAll("[data-year]").forEach(el=>{
 el.textContent = year
