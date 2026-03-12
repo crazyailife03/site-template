@@ -1,54 +1,15 @@
-/* ===== THEME VARIABLES ===== */
-
-:root{
-
---primary:#2563eb;
-
---header-bg:#111827;
---header-text:#ffffff;
-
---hero-bg:#f9fafb;
---hero-text:#111827;
-
---section-bg:#ffffff;
-
---text-color:#111827;
-
---radius:10px;
-
-}
-
-/* ===== GLOBAL ===== */
-
-body{
-color:var(--text-color);
-}
-
-/* ===== HEADER ===== */
-
-.header{
-background:var(--header-bg);
-color:var(--header-text);
-}
-
-/* ===== HERO ===== */
-
-.hero{
-background:var(--hero-bg);
-color:var(--hero-text);
-}
-
-/* ===== FEATURES ===== */
-
-.features{
-background:var(--section-bg);
-}
-
-/* ===== BUTTON ===== */
-
-.btn{
-background:var(--primary);
-color:white;
-border-radius:var(--radius);
-padding:12px 24px;
-}
+LyogPT09PT0gVEhFTUUgVkFSSUFCTEVTID09PT09ICovCgo6cm9vdHsKCi0t
+cHJpbWFyeTojMjU2M2ViOwoKLS1oZWFkZXItYmc6IzExMTgyNzsKLS1oZWFk
+ZXItdGV4dDojZmZmZmZmOwoKLS1oZXJvLWJnOiNmOWZhZmI7Ci0taGVyby10
+ZXh0OiMxMTE4Mjc7CgotLXNlY3Rpb24tYmc6I2ZmZmZmZjsKCi0tdGV4dC1j
+b2xvcjojMTExODI3OwoKLS1yYWRpdXM6MTBweDsKCn0KCi8qID09PT09IEdM
+T0JBTCA9PT09PSAqLwoKYm9keXsKY29sb3I6dmFyKC0tdGV4dC1jb2xvcik7
+Cn0KCi8qID09PT09IEhFQURFUiA9PT09PSAqLwoKLmhlYWRlcnsKYmFja2dy
+b3VuZDp2YXIoLS1oZWFkZXItYmcpOwpjb2xvcjp2YXIoLS1oZWFkZXItdGV4
+dCk7Cn0KCi8qID09PT09IEhFUk8gPT09PT0gKi8KCi5oZXJvewpiYWNrZ3Jv
+dW5kOnZhcigtLWhlcm8tYmcpOwpjb2xvcjp2YXIoLS1oZXJvLXRleHQpOwp9
+CgovKiA9PT09PSBGRUFUVVJFUyA9PT09PSAqLwoKLmZlYXR1cmVzewpiYWNr
+Z3JvdW5kOnZhcigtLXNlY3Rpb24tYmcpOwp9CgovKiA9PT09PSBCVVRUT04g
+PT09PT0gKi8KCi5idG57CmJhY2tncm91bmQ6dmFyKC0tcHJpbWFyeSk7CmNv
+bG9yOndoaXRlOwpib3JkZXItcmFkaXVzOnZhcigtLXJhZGl1cyk7CnBhZGRp
+bmc6MTJweCAyNHB4Owp9
