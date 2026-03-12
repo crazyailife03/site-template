@@ -1,0 +1,54 @@
+/* ===== THEME VARIABLES ===== */
+
+:root{
+
+--primary:#2563eb;
+
+--header-bg:#111827;
+--header-text:#ffffff;
+
+--hero-bg:#f9fafb;
+--hero-text:#111827;
+
+--section-bg:#ffffff;
+
+--text-color:#111827;
+
+--radius:10px;
+
+}
+
+/* ===== GLOBAL ===== */
+
+body{
+color:var(--text-color);
+}
+
+/* ===== HEADER ===== */
+
+.header{
+background:var(--header-bg);
+color:var(--header-text);
+}
+
+/* ===== HERO ===== */
+
+.hero{
+background:var(--hero-bg);
+color:var(--hero-text);
+}
+
+/* ===== FEATURES ===== */
+
+.features{
+background:var(--section-bg);
+}
+
+/* ===== BUTTON ===== */
+
+.btn{
+background:var(--primary);
+color:white;
+border-radius:var(--radius);
+padding:12px 24px;
+}
