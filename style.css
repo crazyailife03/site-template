@@ -1,54 +1,86 @@
 /* ===== THEME VARIABLES ===== */
+:root {
+  /* 品牌色與強調色 */
+  --primary: #2563eb;
+  --secondary: #6366f1;
+  --accent: #f59e0b;
 
-:root{
+  /* 背景系統 (建議 AI 根據深淺模式調整這組) */
+  --bg-main: #ffffff;      /* 頁面大底色 */
+  --bg-paper: #f9fafb;     /* 輕微偏移的背景，用於 Header 或 Card */
+  --bg-dark: #111827;      /* 用於深色區塊或 Footer */
 
---primary:#2563eb;
+  /* 文字系統 */
+  --text-main: #111827;    /* 主標題、內文 */
+  --text-muted: #4b5563;   /* 次要說明文字 */
+  --text-on-primary: #ffffff; /* 放在品牌色上的文字顏色 */
 
---header-bg:#111827;
---header-text:#ffffff;
-
---hero-bg:#f9fafb;
---hero-text:#111827;
-
---section-bg:#ffffff;
-
---text-color:#111827;
-
---radius:10px;
-
+  /* 裝飾系統 */
+  --border: #e5e7eb;       /* 邊框、分隔線 */
+  --radius: 10px;          /* 圓角 */
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
-/* ===== GLOBAL ===== */
-
-body{
-color:var(--text-color);
+/* ===== GLOBAL RESET & BASE ===== */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
 }
 
-/* ===== HEADER ===== */
+/* ===== UTILITY CLASSES (讓組件直接套用) ===== */
 
-.header{
-background:var(--header-bg);
-color:var(--header-text);
+/* 背景切換 */
+.bg-main { background-color: var(--bg-main); }
+.bg-paper { background-color: var(--bg-paper); }
+.bg-dark { background-color: var(--bg-dark); color: white; }
+
+/* 按鈕系統 */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
-/* ===== HERO ===== */
-
-.hero{
-background:var(--hero-bg);
-color:var(--hero-text);
+.btn-primary:hover {
+  opacity: 0.9;
 }
 
-/* ===== FEATURES ===== */
-
-.features{
-background:var(--section-bg);
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 8px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
-/* ===== BUTTON ===== */
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+}
 
-.btn{
-background:var(--primary);
-color:white;
-border-radius:var(--radius);
-padding:12px 24px;
+/* 邊框輔助 */
+.border-subtle {
+  border-bottom: 1px solid var(--border);
+}
+
+/* 容器限制 */
+.container-max {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }

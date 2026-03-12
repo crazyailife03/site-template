@@ -1,0 +1,21 @@
+<section class="w-full py-20 px-6 bg-[var(--bg-paper)]">
+  <div class="max-w-6xl mx-auto bg-[var(--bg-main)] rounded-[40px] shadow-sm border border-[var(--border)] overflow-hidden flex flex-col md:flex-row">
+    <div class="md:w-1/2 p-12 lg:p-20 flex flex-col justify-center space-y-6">
+      <h1 class="text-4xl lg:text-5xl font-serif italic" style="color: var(--text-main);">
+        {{hero_title}}
+      </h1>
+      <p class="text-lg leading-relaxed" style="color: var(--text-muted);">
+        {{hero_description}}
+      </p>
+      <a href="#" class="inline-flex items-center font-bold group" style="color: var(--primary);">
+        探索更多 
+        <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+      </a>
+    </div>
+    <div class="md:w-1/2 bg-[var(--bg-paper)] relative min-h-[300px]">
+        <div class="absolute inset-0 flex items-center justify-center">
+             <div class="w-32 h-32 rounded-full animate-pulse" style="background-color: var(--primary); opacity: 0.1;"></div>
+        </div>
+    </div>
+  </div>
+</section>

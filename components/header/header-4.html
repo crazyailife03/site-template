@@ -1,11 +1,21 @@
-<header class="w-full px-8 py-8 flex justify-between items-center bg-[var(--bg-main)]">
-  <div class="text-xl font-black uppercase italic text-[var(--text-main)]">{{logo_text}}</div>
-  <div class="flex items-center space-x-6">
-    <a href="mailto:{{email}}" class="hidden sm:block text-sm font-medium border-b-2 border-[var(--primary)] text-[var(--text-main)]">Work with us</a>
-    <button class="p-2 space-y-1.5">
-      <div class="w-8 h-0.5 bg-[var(--text-main)]"></div>
-      <div class="w-8 h-0.5 bg-[var(--text-main)]"></div>
-      <div class="w-5 h-0.5 bg-[var(--primary)] ml-auto"></div>
-    </button>
+<header class="w-full shadow-sm">
+  <div class="py-2 text-xs font-medium text-center" style="background-color: var(--bg-paper); color: var(--text-muted); border-bottom: 1px solid var(--border);">
+    Free shipping on all orders over $99. <a href="#" style="color: var(--primary);" class="underline font-bold">Details</a>
+  </div>
+  
+  <div class="w-full bg-[var(--bg-main)] px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-2xl font-extrabold" style="color: var(--primary);">{{logo_text}}</div>
+      
+      <div class="flex items-center space-x-6">
+        <nav class="hidden lg:flex space-x-8 font-semibold">
+          <a href="#" style="color: var(--text-main);">Store</a>
+          <a href="#" style="color: var(--text-main);">Support</a>
+        </nav>
+        <button class="p-2 rounded-full hover:bg-[var(--bg-paper)] transition">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-main);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+    </div>
   </div>
 </header>

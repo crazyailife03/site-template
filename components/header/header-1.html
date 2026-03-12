@@ -15,22 +15,19 @@
     </div>
 </header> -->
 
-<header class="w-full border-b border-[var(--border)] bg-[var(--bg-paper)]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <div class="flex items-center space-x-8">
-        <div class="text-2xl font-bold text-[var(--primary)]">{{logo_text}}</div>
-        <nav class="hidden md:flex space-x-6 text-sm font-medium text-[var(--text-main)]">
-          <a href="#" class="hover:text-[var(--primary)] transition">Product</a>
-          <a href="#" class="hover:text-[var(--primary)] transition">Features</a>
-          <a href="#" class="hover:text-[var(--primary)] transition">Pricing</a>
-        </nav>
-      </div>
-      <div class="flex items-center">
-        <button class="bg-[var(--primary)] text-[var(--bg-paper)] px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
-          Get Started
-        </button>
-      </div>
+<header class="w-full border-b border-[var(--border)] bg-[var(--bg-main)]">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+    <div class="text-2xl font-bold" style="color: var(--primary);">{{logo_text}}</div>
+    
+    <nav class="hidden md:flex space-x-8">
+      <a href="#" class="font-medium hover:opacity-70 transition" style="color: var(--text-main);">Features</a>
+      <a href="#" class="font-medium hover:opacity-70 transition" style="color: var(--text-main);">Pricing</a>
+      <a href="#" class="font-medium hover:opacity-70 transition" style="color: var(--text-main);">About</a>
+    </nav>
+
+    <div class="flex items-center space-x-4">
+      <a href="#" class="hidden sm:block font-medium" style="color: var(--text-muted);">Login</a>
+      <button class="btn-primary">Get Started</button>
     </div>
   </div>
 </header>
