@@ -1,11 +1,14 @@
-<header class="header flex justify-between px-6 py-4">
-
-    <h1 class="logo font-bold">
-        header-3
-    </h1>
-
-    <button class="menu-btn">
-        Menu
-    </button>
-
+<header class="fixed top-4 inset-x-0 z-50 max-w-5xl mx-auto">
+  <div class="mx-4 px-6 py-3 flex items-center justify-between rounded-full border border-white/10 bg-[var(--bg-paper)]/70 backdrop-blur-md shadow-lg">
+    <div class="flex items-center space-x-2">
+      <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary)]"></div>
+      <span class="font-bold text-[var(--text-main)] tracking-tight">{{logo_text}}</span>
+    </div>
+    <nav class="hidden md:flex items-center space-x-8 text-sm text-[var(--text-muted)]">
+      <a href="#" class="hover:text-[var(--primary)]">Docs</a>
+      <a href="#" class="hover:text-[var(--primary)]">Community</a>
+      <a href="#" class="hover:text-[var(--primary)]">GitHub</a>
+    </nav>
+    <a href="#" class="text-sm font-medium text-[var(--primary)] hover:underline">Launch App →</a>
+  </div>
 </header>
