@@ -1,0 +1,20 @@
+﻿/* style.css ??custom overrides only, Tailwind + DaisyUI loaded via CDN */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Image placeholder shown when no image is provided */
+.img-placeholder {
+  background: linear-gradient(135deg, oklch(var(--p) / 0.8), oklch(var(--s) / 0.6));
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Transparent header transition (Header Variant 3) */
+[data-header="transparent"] {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
