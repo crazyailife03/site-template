@@ -1,21 +1,25 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Hero
   Variant     : 5
-  Layout      : Split screen: dark text panel left + full-height image right
-  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}}, {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Split screen — dark text panel left + full-height image right
+  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}},
+                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
 ============================================================ -->
-
-<!-- TODO: Build Hero Variant 5 ??Split screen: dark text panel left + full-height image right -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="flex flex-col md:flex-row min-h-[80vh] md:min-h-screen">
+  <!-- Left: Dark text panel -->
+  <div class="flex-1 bg-neutral flex items-center justify-center py-16 md:py-0 px-8 md:px-16">
+    <div class="max-w-lg text-center md:text-left">
+      <p class="text-neutral-content/60 font-semibold text-sm uppercase tracking-widest mb-4">{{HERO_SUBTITLE}}</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-neutral-content mb-6">{{HERO_TITLE}}</h1>
+      <p class="text-neutral-content/70 text-lg mb-8">{{HERO_DESCRIPTION}}</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+        <a href="#contact" class="btn btn-primary btn-lg">{{CTA_PRIMARY}}</a>
+        <a href="#about" class="btn btn-outline border-neutral-content text-neutral-content hover:bg-neutral-content hover:text-neutral btn-lg">{{CTA_SECONDARY}}</a>
+      </div>
+    </div>
+  </div>
+  <!-- Right: Full-height image -->
+  <div class="flex-1 min-h-64 md:min-h-0">
+    <img src="{{HERO_IMAGE}}" alt="{{HERO_TITLE}}" class="w-full h-full object-cover">
   </div>
 </section>

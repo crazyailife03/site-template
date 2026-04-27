@@ -1,21 +1,34 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Stats
   Variant     : 2
-  Layout      : Dark background blocks, prominent numbers
-  Placeholders: {{STATS_TITLE}}, {{STATS_SUBTITLE}}, {{STAT_1~4_NUMBER/LABEL}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Dark background, oversized numbers, 4-column grid
+  Placeholders: {{STATS_TITLE}}, {{STATS_SUBTITLE}},
+                {{STAT_1_NUMBER}}, {{STAT_1_LABEL}},
+                {{STAT_2_NUMBER}}, {{STAT_2_LABEL}},
+                {{STAT_3_NUMBER}}, {{STAT_3_LABEL}},
+                {{STAT_4_NUMBER}}, {{STAT_4_LABEL}}
 ============================================================ -->
-
-<!-- TODO: Build Stats Variant 2 ??Dark background blocks, prominent numbers -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-neutral py-16 md:py-20">
+  <div class="container mx-auto max-w-5xl px-4 text-center">
+    <p class="text-neutral-content/50 font-semibold text-sm uppercase tracking-widest mb-2">{{STATS_SUBTITLE}}</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-content mb-12">{{STATS_TITLE}}</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div>
+        <p class="text-5xl md:text-6xl font-black text-primary leading-none mb-2">{{STAT_1_NUMBER}}</p>
+        <p class="text-neutral-content/60 text-sm uppercase tracking-wide">{{STAT_1_LABEL}}</p>
+      </div>
+      <div>
+        <p class="text-5xl md:text-6xl font-black text-primary leading-none mb-2">{{STAT_2_NUMBER}}</p>
+        <p class="text-neutral-content/60 text-sm uppercase tracking-wide">{{STAT_2_LABEL}}</p>
+      </div>
+      <div>
+        <p class="text-5xl md:text-6xl font-black text-primary leading-none mb-2">{{STAT_3_NUMBER}}</p>
+        <p class="text-neutral-content/60 text-sm uppercase tracking-wide">{{STAT_3_LABEL}}</p>
+      </div>
+      <div>
+        <p class="text-5xl md:text-6xl font-black text-primary leading-none mb-2">{{STAT_4_NUMBER}}</p>
+        <p class="text-neutral-content/60 text-sm uppercase tracking-wide">{{STAT_4_LABEL}}</p>
+      </div>
+    </div>
   </div>
 </section>

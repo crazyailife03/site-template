@@ -1,21 +1,43 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Header
   Variant     : 1
   Layout      : Logo left + nav center + CTA right
   Placeholders: {{COMPANY_NAME}}, {{NAV_1}}~{{NAV_5}}, {{HEADER_CTA}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
 ============================================================ -->
-
-<!-- TODO: Build Header Variant 1 ??Logo left + nav center + CTA right -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<header class="bg-base-100 shadow-sm sticky top-0 z-50">
+  <div class="navbar container mx-auto max-w-6xl px-4">
+    <div class="navbar-start">
+      <a href="#" class="text-xl font-bold text-primary">{{COMPANY_NAME}}</a>
+    </div>
+    <nav class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal gap-1 text-sm font-medium">
+        <li><a href="#">{{NAV_1}}</a></li>
+        <li><a href="#">{{NAV_2}}</a></li>
+        <li><a href="#">{{NAV_3}}</a></li>
+        <li><a href="#">{{NAV_4}}</a></li>
+        <li><a href="#">{{NAV_5}}</a></li>
+      </ul>
+    </nav>
+    <div class="navbar-end gap-2">
+      <a href="#contact" class="btn btn-primary btn-sm hidden lg:flex">{{HEADER_CTA}}</a>
+      <button class="btn btn-ghost btn-square lg:hidden" onclick="toggleMobileMenu()">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
   </div>
-</section>
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-base-200 bg-base-100">
+    <ul class="menu p-4 gap-1">
+      <li><a href="#">{{NAV_1}}</a></li>
+      <li><a href="#">{{NAV_2}}</a></li>
+      <li><a href="#">{{NAV_3}}</a></li>
+      <li><a href="#">{{NAV_4}}</a></li>
+      <li><a href="#">{{NAV_5}}</a></li>
+    </ul>
+    <div class="px-4 pb-4">
+      <a href="#contact" class="btn btn-primary btn-sm w-full">{{HEADER_CTA}}</a>
+    </div>
+  </div>
+</header>

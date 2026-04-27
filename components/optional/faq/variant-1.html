@@ -1,21 +1,56 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : FAQ
   Variant     : 1
-  Layout      : Accordion (collapse/expand)
-  Placeholders: {{FAQ_TITLE}}, {{FAQ_SUBTITLE}}, {{FAQ_1~5_Q/A}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Accordion (DaisyUI collapse, expand one at a time)
+  Placeholders: {{FAQ_TITLE}}, {{FAQ_SUBTITLE}},
+                {{FAQ_1_Q}}, {{FAQ_1_A}},
+                {{FAQ_2_Q}}, {{FAQ_2_A}},
+                {{FAQ_3_Q}}, {{FAQ_3_A}},
+                {{FAQ_4_Q}}, {{FAQ_4_A}},
+                {{FAQ_5_Q}}, {{FAQ_5_A}}
 ============================================================ -->
-
-<!-- TODO: Build FAQ Variant 1 ??Accordion (collapse/expand) -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-3xl px-4">
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FAQ_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{FAQ_TITLE}}</h2>
+    </div>
+    <div class="space-y-3">
+      <div class="collapse collapse-arrow bg-base-200 rounded-xl">
+        <input type="radio" name="faq" checked>
+        <div class="collapse-title font-semibold">{{FAQ_1_Q}}</div>
+        <div class="collapse-content text-base-content/70 text-sm leading-relaxed">
+          <p>{{FAQ_1_A}}</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 rounded-xl">
+        <input type="radio" name="faq">
+        <div class="collapse-title font-semibold">{{FAQ_2_Q}}</div>
+        <div class="collapse-content text-base-content/70 text-sm leading-relaxed">
+          <p>{{FAQ_2_A}}</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 rounded-xl">
+        <input type="radio" name="faq">
+        <div class="collapse-title font-semibold">{{FAQ_3_Q}}</div>
+        <div class="collapse-content text-base-content/70 text-sm leading-relaxed">
+          <p>{{FAQ_3_A}}</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 rounded-xl">
+        <input type="radio" name="faq">
+        <div class="collapse-title font-semibold">{{FAQ_4_Q}}</div>
+        <div class="collapse-content text-base-content/70 text-sm leading-relaxed">
+          <p>{{FAQ_4_A}}</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200 rounded-xl">
+        <input type="radio" name="faq">
+        <div class="collapse-title font-semibold">{{FAQ_5_Q}}</div>
+        <div class="collapse-content text-base-content/70 text-sm leading-relaxed">
+          <p>{{FAQ_5_A}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

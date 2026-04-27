@@ -1,21 +1,35 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Footer
   Variant     : 4
   Layout      : Large CTA block on top + minimal copyright bar below
-  Placeholders: {{COMPANY_NAME}}, {{FOOTER_TAGLINE}}, {{FOOTER_LINK_1}}~{{FOOTER_LINK_4}}, {{COPYRIGHT}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Placeholders: {{COMPANY_NAME}}, {{FOOTER_TAGLINE}},
+                {{FOOTER_LINK_1}} ~ {{FOOTER_LINK_4}},
+                {{CONTACT_EMAIL}}, {{COPYRIGHT}}
+  Note        : FOOTER_TAGLINE used as CTA headline; CONTACT_EMAIL as CTA target
 ============================================================ -->
-
-<!-- TODO: Build Footer Variant 4 ??Large CTA block on top + minimal copyright bar below -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<footer>
+  <!-- CTA block -->
+  <div class="bg-primary py-16 md:py-20">
+    <div class="container mx-auto max-w-4xl px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-content mb-4">{{FOOTER_TAGLINE}}</h2>
+      <a href="mailto:{{CONTACT_EMAIL}}" class="btn btn-outline border-primary-content text-primary-content hover:bg-primary-content hover:text-primary btn-lg mt-2">
+        {{CONTACT_EMAIL}}
+      </a>
+    </div>
   </div>
-</section>
+  <!-- Copyright bar -->
+  <div class="bg-neutral py-5">
+    <div class="container mx-auto max-w-6xl px-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <a href="#" class="text-sm font-bold text-neutral-content">{{COMPANY_NAME}}</a>
+      <nav>
+        <ul class="flex flex-wrap gap-x-5 gap-y-1 text-xs text-neutral-content/60">
+          <li><a href="#" class="hover:text-neutral-content transition-colors">{{FOOTER_LINK_1}}</a></li>
+          <li><a href="#" class="hover:text-neutral-content transition-colors">{{FOOTER_LINK_2}}</a></li>
+          <li><a href="#" class="hover:text-neutral-content transition-colors">{{FOOTER_LINK_3}}</a></li>
+          <li><a href="#" class="hover:text-neutral-content transition-colors">{{FOOTER_LINK_4}}</a></li>
+        </ul>
+      </nav>
+      <p class="text-xs text-neutral-content/40">{{COPYRIGHT}}</p>
+    </div>
+  </div>
+</footer>

@@ -1,21 +1,36 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Stats
   Variant     : 1
-  Layout      : 4-column number display, light background
-  Placeholders: {{STATS_TITLE}}, {{STATS_SUBTITLE}}, {{STAT_1~4_NUMBER/LABEL}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : 4-column stats display, light background
+  Placeholders: {{STATS_TITLE}}, {{STATS_SUBTITLE}},
+                {{STAT_1_NUMBER}}, {{STAT_1_LABEL}},
+                {{STAT_2_NUMBER}}, {{STAT_2_LABEL}},
+                {{STAT_3_NUMBER}}, {{STAT_3_LABEL}},
+                {{STAT_4_NUMBER}}, {{STAT_4_LABEL}}
 ============================================================ -->
-
-<!-- TODO: Build Stats Variant 1 ??4-column number display, light background -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-200 py-16 md:py-20">
+  <div class="container mx-auto max-w-5xl px-4">
+    <div class="text-center mb-10">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{STATS_SUBTITLE}}</p>
+      <h2 class="text-2xl md:text-3xl font-bold">{{STATS_TITLE}}</h2>
+    </div>
+    <div class="stats stats-vertical md:stats-horizontal shadow w-full bg-base-100">
+      <div class="stat text-center">
+        <div class="stat-value text-primary text-4xl md:text-5xl font-black">{{STAT_1_NUMBER}}</div>
+        <div class="stat-desc text-base font-medium text-base-content mt-1">{{STAT_1_LABEL}}</div>
+      </div>
+      <div class="stat text-center">
+        <div class="stat-value text-primary text-4xl md:text-5xl font-black">{{STAT_2_NUMBER}}</div>
+        <div class="stat-desc text-base font-medium text-base-content mt-1">{{STAT_2_LABEL}}</div>
+      </div>
+      <div class="stat text-center">
+        <div class="stat-value text-primary text-4xl md:text-5xl font-black">{{STAT_3_NUMBER}}</div>
+        <div class="stat-desc text-base font-medium text-base-content mt-1">{{STAT_3_LABEL}}</div>
+      </div>
+      <div class="stat text-center">
+        <div class="stat-value text-primary text-4xl md:text-5xl font-black">{{STAT_4_NUMBER}}</div>
+        <div class="stat-desc text-base font-medium text-base-content mt-1">{{STAT_4_LABEL}}</div>
+      </div>
+    </div>
   </div>
 </section>

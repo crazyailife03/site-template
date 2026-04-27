@@ -1,21 +1,48 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Header
   Variant     : 4
-  Layout      : Left vertical sidebar nav, hamburger on mobile
+  Layout      : Compact top bar + slide-in sidebar overlay (all screen sizes)
   Placeholders: {{COMPANY_NAME}}, {{NAV_1}}~{{NAV_5}}, {{HEADER_CTA}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
 ============================================================ -->
-
-<!-- TODO: Build Header Variant 4 ??Left vertical sidebar nav, hamburger on mobile -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<header class="bg-base-100 shadow-sm sticky top-0 z-40">
+  <div class="navbar container mx-auto max-w-6xl px-4">
+    <div class="navbar-start">
+      <button class="btn btn-ghost btn-square" onclick="toggleMobileMenu()">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div class="navbar-center">
+      <a href="#" class="text-xl font-bold text-primary">{{COMPANY_NAME}}</a>
+    </div>
+    <div class="navbar-end">
+      <a href="#contact" class="btn btn-primary btn-sm">{{HEADER_CTA}}</a>
+    </div>
   </div>
-</section>
+</header>
+
+<!-- Slide-in sidebar overlay -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-50">
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
+  <aside class="absolute left-0 top-0 h-full w-72 bg-base-100 shadow-2xl flex flex-col">
+    <div class="flex items-center justify-between p-5 border-b border-base-200">
+      <span class="text-xl font-bold text-primary">{{COMPANY_NAME}}</span>
+      <button class="btn btn-ghost btn-square btn-sm" onclick="toggleMobileMenu()">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="menu p-4 gap-2 flex-1 text-base">
+      <li><a href="#" onclick="toggleMobileMenu()">{{NAV_1}}</a></li>
+      <li><a href="#" onclick="toggleMobileMenu()">{{NAV_2}}</a></li>
+      <li><a href="#" onclick="toggleMobileMenu()">{{NAV_3}}</a></li>
+      <li><a href="#" onclick="toggleMobileMenu()">{{NAV_4}}</a></li>
+      <li><a href="#" onclick="toggleMobileMenu()">{{NAV_5}}</a></li>
+    </ul>
+    <div class="p-5 border-t border-base-200">
+      <a href="#contact" class="btn btn-primary w-full" onclick="toggleMobileMenu()">{{HEADER_CTA}}</a>
+    </div>
+  </aside>
+</div>

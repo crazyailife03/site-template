@@ -1,21 +1,23 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Hero
   Variant     : 2
   Layout      : Full-width background image + dark overlay + centered text
-  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}}, {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}},
+                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
 ============================================================ -->
-
-<!-- TODO: Build Hero Variant 2 ??Full-width background image + dark overlay + centered text -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background image -->
+  <img src="{{HERO_IMAGE}}" alt="{{HERO_TITLE}}" class="absolute inset-0 w-full h-full object-cover">
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/55"></div>
+  <!-- Content -->
+  <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+    <p class="text-white/70 font-semibold text-sm uppercase tracking-widest mb-4">{{HERO_SUBTITLE}}</p>
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">{{HERO_TITLE}}</h1>
+    <p class="text-white/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto">{{HERO_DESCRIPTION}}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="btn btn-primary btn-lg">{{CTA_PRIMARY}}</a>
+      <a href="#about" class="btn btn-outline border-white text-white hover:bg-white hover:text-base-content btn-lg">{{CTA_SECONDARY}}</a>
+    </div>
   </div>
 </section>

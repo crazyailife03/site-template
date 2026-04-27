@@ -1,21 +1,27 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Hero
   Variant     : 4
   Layout      : Image left + text right (image-first layout)
-  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}}, {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}},
+                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
 ============================================================ -->
-
-<!-- TODO: Build Hero Variant 4 ??Image left + text right (image-first layout) -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+      <!-- Image (first on desktop, second on mobile) -->
+      <div class="flex-1 w-full">
+        <img src="{{HERO_IMAGE}}" alt="{{HERO_TITLE}}" class="w-full h-auto rounded-2xl shadow-2xl object-cover aspect-video">
+      </div>
+      <!-- Text -->
+      <div class="flex-1 text-center md:text-left">
+        <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-3">{{HERO_SUBTITLE}}</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5">{{HERO_TITLE}}</h1>
+        <p class="text-base-content/60 text-lg mb-8 max-w-lg mx-auto md:mx-0">{{HERO_DESCRIPTION}}</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+          <a href="#contact" class="btn btn-primary btn-lg">{{CTA_PRIMARY}}</a>
+          <a href="#about" class="btn btn-ghost btn-lg">{{CTA_SECONDARY}}</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

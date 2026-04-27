@@ -1,21 +1,39 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Contact
   Variant     : 2
-  Layout      : Centered 3-column info cards (email, phone, address)
-  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}}, {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Centered 3-column info cards (email, phone, address) — no form
+  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
+                {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
 ============================================================ -->
-
-<!-- TODO: Build Contact Variant 2 ??Centered 3-column info cards (email, phone, address) -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section id="contact" class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-5xl px-4 text-center">
+    <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{CONTACT_SUBTITLE}}</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">{{CONTACT_TITLE}}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Email -->
+      <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center gap-3">
+          <div class="text-4xl">✉</div>
+          <h3 class="font-bold text-lg">Email</h3>
+          <a href="mailto:{{CONTACT_EMAIL}}" class="text-primary hover:underline break-all">{{CONTACT_EMAIL}}</a>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center gap-3">
+          <div class="text-4xl">📞</div>
+          <h3 class="font-bold text-lg">Phone</h3>
+          <a href="tel:{{CONTACT_PHONE}}" class="text-primary hover:underline">{{CONTACT_PHONE}}</a>
+        </div>
+      </div>
+      <!-- Address -->
+      <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center gap-3">
+          <div class="text-4xl">📍</div>
+          <h3 class="font-bold text-lg">Address</h3>
+          <p class="text-base-content/70">{{CONTACT_ADDRESS}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

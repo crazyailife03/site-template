@@ -1,21 +1,45 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Header
   Variant     : 5
-  Layout      : Minimal hamburger, click opens fullscreen overlay menu
+  Layout      : Minimal top bar (logo + menu button), fullscreen overlay on click
   Placeholders: {{COMPANY_NAME}}, {{NAV_1}}~{{NAV_5}}, {{HEADER_CTA}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
 ============================================================ -->
-
-<!-- TODO: Build Header Variant 5 ??Minimal hamburger, click opens fullscreen overlay menu -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<header class="bg-base-100 sticky top-0 z-40">
+  <div class="navbar container mx-auto max-w-6xl px-4">
+    <div class="navbar-start">
+      <a href="#" class="text-xl font-bold text-primary">{{COMPANY_NAME}}</a>
+    </div>
+    <div class="navbar-end">
+      <button class="btn btn-ghost gap-2 text-sm font-medium" onclick="toggleMobileMenu()">
+        <span class="hidden sm:inline">Menu</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
   </div>
-</section>
+</header>
+
+<!-- Fullscreen overlay menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-primary z-50 flex flex-col">
+  <div class="flex items-center justify-between p-6">
+    <span class="text-2xl font-bold text-primary-content">{{COMPANY_NAME}}</span>
+    <button class="btn btn-ghost btn-square text-primary-content" onclick="toggleMobileMenu()">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="flex-1 flex flex-col items-center justify-center">
+    <ul class="flex flex-col items-center gap-6">
+      <li><a href="#" class="text-3xl md:text-4xl font-bold text-primary-content hover:opacity-70 transition-opacity" onclick="toggleMobileMenu()">{{NAV_1}}</a></li>
+      <li><a href="#" class="text-3xl md:text-4xl font-bold text-primary-content hover:opacity-70 transition-opacity" onclick="toggleMobileMenu()">{{NAV_2}}</a></li>
+      <li><a href="#" class="text-3xl md:text-4xl font-bold text-primary-content hover:opacity-70 transition-opacity" onclick="toggleMobileMenu()">{{NAV_3}}</a></li>
+      <li><a href="#" class="text-3xl md:text-4xl font-bold text-primary-content hover:opacity-70 transition-opacity" onclick="toggleMobileMenu()">{{NAV_4}}</a></li>
+      <li><a href="#" class="text-3xl md:text-4xl font-bold text-primary-content hover:opacity-70 transition-opacity" onclick="toggleMobileMenu()">{{NAV_5}}</a></li>
+    </ul>
+  </nav>
+  <div class="p-6">
+    <a href="#contact" class="btn btn-outline border-primary-content text-primary-content hover:bg-primary-content hover:text-primary w-full sm:w-auto sm:min-w-48" onclick="toggleMobileMenu()">{{HEADER_CTA}}</a>
+  </div>
+</div>

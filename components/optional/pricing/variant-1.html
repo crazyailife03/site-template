@@ -1,21 +1,98 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Pricing
   Variant     : 1
-  Layout      : Horizontal plan cards (2~4 columns)
-  Placeholders: {{PRICING_TITLE}}, {{PRICING_SUBTITLE}}, {{PLAN_1~4_NAME/PRICE/PERIOD/DESC/FEATURES/CTA}} (plans 3~4 use block markers)
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Horizontal plan cards (2~4 columns), plan 2 highlighted
+  Placeholders: {{PRICING_TITLE}}, {{PRICING_SUBTITLE}},
+                {{PLAN_1_NAME}}, {{PLAN_1_PRICE}}, {{PLAN_1_PERIOD}}, {{PLAN_1_DESC}},
+                {{PLAN_1_FEATURE_1}} ~ {{PLAN_1_FEATURE_4}}, {{PLAN_1_CTA}},
+                {{PLAN_2_NAME}}, {{PLAN_2_PRICE}}, {{PLAN_2_PERIOD}}, {{PLAN_2_DESC}},
+                {{PLAN_2_FEATURE_1}} ~ {{PLAN_2_FEATURE_4}}, {{PLAN_2_CTA}},
+                (plans 3~4 wrapped in {{#PLAN_3}}...{{/PLAN_3}} block markers)
 ============================================================ -->
-
-<!-- TODO: Build Pricing Variant 1 ??Horizontal plan cards (2~4 columns) -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-5xl px-4">
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{PRICING_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{PRICING_TITLE}}</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+      <!-- Plan 1 -->
+      <div class="card bg-base-200 border border-base-300">
+        <div class="card-body gap-4">
+          <h3 class="text-lg font-bold">{{PLAN_1_NAME}}</h3>
+          <div class="flex items-end gap-1">
+            <span class="text-4xl font-black">{{PLAN_1_PRICE}}</span>
+            <span class="text-base-content/50 mb-1">/ {{PLAN_1_PERIOD}}</span>
+          </div>
+          <p class="text-sm text-base-content/60">{{PLAN_1_DESC}}</p>
+          <ul class="space-y-2 text-sm flex-1">
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_1_FEATURE_1}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_1_FEATURE_2}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_1_FEATURE_3}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_1_FEATURE_4}}</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline w-full mt-2">{{PLAN_1_CTA}}</a>
+        </div>
+      </div>
+      <!-- Plan 2 (highlighted) -->
+      <div class="card bg-primary text-primary-content border border-primary shadow-xl">
+        <div class="card-body gap-4">
+          <div class="flex justify-between items-start">
+            <h3 class="text-lg font-bold">{{PLAN_2_NAME}}</h3>
+            <span class="badge badge-secondary text-xs">Popular</span>
+          </div>
+          <div class="flex items-end gap-1">
+            <span class="text-4xl font-black">{{PLAN_2_PRICE}}</span>
+            <span class="text-primary-content/60 mb-1">/ {{PLAN_2_PERIOD}}</span>
+          </div>
+          <p class="text-sm text-primary-content/70">{{PLAN_2_DESC}}</p>
+          <ul class="space-y-2 text-sm flex-1">
+            <li class="flex items-center gap-2"><span>✓</span> {{PLAN_2_FEATURE_1}}</li>
+            <li class="flex items-center gap-2"><span>✓</span> {{PLAN_2_FEATURE_2}}</li>
+            <li class="flex items-center gap-2"><span>✓</span> {{PLAN_2_FEATURE_3}}</li>
+            <li class="flex items-center gap-2"><span>✓</span> {{PLAN_2_FEATURE_4}}</li>
+          </ul>
+          <a href="#contact" class="btn bg-primary-content text-primary hover:bg-primary-content/90 w-full mt-2 border-0">{{PLAN_2_CTA}}</a>
+        </div>
+      </div>
+      {{#PLAN_3}}
+      <div class="card bg-base-200 border border-base-300">
+        <div class="card-body gap-4">
+          <h3 class="text-lg font-bold">{{PLAN_3_NAME}}</h3>
+          <div class="flex items-end gap-1">
+            <span class="text-4xl font-black">{{PLAN_3_PRICE}}</span>
+            <span class="text-base-content/50 mb-1">/ {{PLAN_3_PERIOD}}</span>
+          </div>
+          <p class="text-sm text-base-content/60">{{PLAN_3_DESC}}</p>
+          <ul class="space-y-2 text-sm flex-1">
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_3_FEATURE_1}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_3_FEATURE_2}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_3_FEATURE_3}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_3_FEATURE_4}}</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline w-full mt-2">{{PLAN_3_CTA}}</a>
+        </div>
+      </div>
+      {{/PLAN_3}}
+      {{#PLAN_4}}
+      <div class="card bg-base-200 border border-base-300">
+        <div class="card-body gap-4">
+          <h3 class="text-lg font-bold">{{PLAN_4_NAME}}</h3>
+          <div class="flex items-end gap-1">
+            <span class="text-4xl font-black">{{PLAN_4_PRICE}}</span>
+            <span class="text-base-content/50 mb-1">/ {{PLAN_4_PERIOD}}</span>
+          </div>
+          <p class="text-sm text-base-content/60">{{PLAN_4_DESC}}</p>
+          <ul class="space-y-2 text-sm flex-1">
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_4_FEATURE_1}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_4_FEATURE_2}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_4_FEATURE_3}}</li>
+            <li class="flex items-center gap-2"><span class="text-success">✓</span> {{PLAN_4_FEATURE_4}}</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline w-full mt-2">{{PLAN_4_CTA}}</a>
+        </div>
+      </div>
+      {{/PLAN_4}}
+    </div>
   </div>
 </section>

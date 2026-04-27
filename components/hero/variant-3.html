@@ -1,21 +1,19 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Hero
   Variant     : 3
   Layout      : Text only centered, oversized headline, no image (minimal)
-  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}}, {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}},
+                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}
+  Note        : This variant intentionally has no image
 ============================================================ -->
-
-<!-- TODO: Build Hero Variant 3 ??Text only centered, oversized headline, no image (minimal) -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-200 py-24 md:py-36">
+  <div class="container mx-auto max-w-5xl px-4 text-center">
+    <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-4">{{HERO_SUBTITLE}}</p>
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-6">{{HERO_TITLE}}</h1>
+    <p class="text-base-content/60 text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light">{{HERO_DESCRIPTION}}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="btn btn-primary btn-lg px-10">{{CTA_PRIMARY}}</a>
+      <a href="#about" class="btn btn-outline btn-lg px-10">{{CTA_SECONDARY}}</a>
+    </div>
   </div>
 </section>

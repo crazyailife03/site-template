@@ -1,21 +1,55 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Gallery
   Variant     : 1
-  Layout      : 3x2 uniform grid
-  Placeholders: {{GALLERY_TITLE}}, {{GALLERY_SUBTITLE}}, {{GALLERY_1~6_IMAGE/CAPTION}} (use .img-placeholder when no image)
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : 3x2 uniform grid with hover caption overlay
+  Placeholders: {{GALLERY_TITLE}}, {{GALLERY_SUBTITLE}},
+                {{GALLERY_1_IMAGE}} ~ {{GALLERY_6_IMAGE}},
+                {{GALLERY_1_CAPTION}} ~ {{GALLERY_6_CAPTION}}
+  Note        : Use .img-placeholder class when no image is provided
 ============================================================ -->
-
-<!-- TODO: Build Gallery Variant 1 ??3x2 uniform grid -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{GALLERY_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{GALLERY_TITLE}}</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="relative group overflow-hidden rounded-xl aspect-square">
+        <img src="{{GALLERY_1_IMAGE}}" alt="{{GALLERY_1_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <p class="text-white font-medium text-sm">{{GALLERY_1_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl aspect-square">
+        <img src="{{GALLERY_2_IMAGE}}" alt="{{GALLERY_2_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <p class="text-white font-medium text-sm">{{GALLERY_2_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl aspect-square">
+        <img src="{{GALLERY_3_IMAGE}}" alt="{{GALLERY_3_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <p class="text-white font-medium text-sm">{{GALLERY_3_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl aspect-square">
+        <img src="{{GALLERY_4_IMAGE}}" alt="{{GALLERY_4_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <p class="text-white font-medium text-sm">{{GALLERY_4_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl aspect-square">
+        <img src="{{GALLERY_5_IMAGE}}" alt="{{GALLERY_5_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <p class="text-white font-medium text-sm">{{GALLERY_5_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl aspect-square">
+        <img src="{{GALLERY_6_IMAGE}}" alt="{{GALLERY_6_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <p class="text-white font-medium text-sm">{{GALLERY_6_CAPTION}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

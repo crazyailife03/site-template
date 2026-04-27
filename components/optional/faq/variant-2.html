@@ -1,21 +1,41 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : FAQ
   Variant     : 2
-  Layout      : 2-column Q&A list
-  Placeholders: {{FAQ_TITLE}}, {{FAQ_SUBTITLE}}, {{FAQ_1~5_Q/A}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : 2-column Q&A list (no accordion, all visible)
+  Placeholders: {{FAQ_TITLE}}, {{FAQ_SUBTITLE}},
+                {{FAQ_1_Q}}, {{FAQ_1_A}},
+                {{FAQ_2_Q}}, {{FAQ_2_A}},
+                {{FAQ_3_Q}}, {{FAQ_3_A}},
+                {{FAQ_4_Q}}, {{FAQ_4_A}},
+                {{FAQ_5_Q}}, {{FAQ_5_A}}
 ============================================================ -->
-
-<!-- TODO: Build FAQ Variant 2 ??2-column Q&A list -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-5xl px-4">
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FAQ_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{FAQ_TITLE}}</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="font-bold text-base mb-2">{{FAQ_1_Q}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{FAQ_1_A}}</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-base mb-2">{{FAQ_2_Q}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{FAQ_2_A}}</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-base mb-2">{{FAQ_3_Q}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{FAQ_3_A}}</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-base mb-2">{{FAQ_4_Q}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{FAQ_4_A}}</p>
+      </div>
+      <div class="md:col-span-2">
+        <h3 class="font-bold text-base mb-2">{{FAQ_5_Q}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed max-w-xl">{{FAQ_5_A}}</p>
+      </div>
+    </div>
   </div>
 </section>

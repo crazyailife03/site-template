@@ -1,21 +1,58 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Contact
   Variant     : 3
-  Layout      : Full-width form, contact info above
-  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}}, {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Contact info row above + full-width form below
+  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
+                {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
 ============================================================ -->
-
-<!-- TODO: Build Contact Variant 3 ??Full-width form, contact info above -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section id="contact" class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-4xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{CONTACT_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{CONTACT_TITLE}}</h2>
+    </div>
+    <!-- Info row -->
+    <div class="flex flex-col sm:flex-row justify-center gap-6 mb-10 text-center">
+      <a href="mailto:{{CONTACT_EMAIL}}" class="flex items-center gap-2 justify-center hover:text-primary transition-colors">
+        <span>✉</span><span class="font-medium">{{CONTACT_EMAIL}}</span>
+      </a>
+      <span class="hidden sm:block text-base-content/30">|</span>
+      <a href="tel:{{CONTACT_PHONE}}" class="flex items-center gap-2 justify-center hover:text-primary transition-colors">
+        <span>📞</span><span class="font-medium">{{CONTACT_PHONE}}</span>
+      </a>
+      <span class="hidden sm:block text-base-content/30">|</span>
+      <span class="flex items-center gap-2 justify-center">
+        <span>📍</span><span class="text-base-content/70">{{CONTACT_ADDRESS}}</span>
+      </span>
+    </div>
+    <!-- Full-width form -->
+    <div class="card bg-base-200 shadow-sm">
+      <div class="card-body">
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text">Name</span></label>
+              <input type="text" placeholder="Your name" class="input input-bordered w-full">
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Email</span></label>
+              <input type="email" placeholder="your@email.com" class="input input-bordered w-full">
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text">Phone</span></label>
+              <input type="tel" placeholder="Your phone" class="input input-bordered w-full">
+            </div>
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text">Message</span></label>
+            <textarea class="textarea textarea-bordered h-36 w-full" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <div class="text-right">
+            <button type="submit" class="btn btn-primary px-12">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>

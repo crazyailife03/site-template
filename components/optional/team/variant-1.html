@@ -1,21 +1,43 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Team
   Variant     : 1
   Layout      : 3-column cards: photo + name + role + bio
-  Placeholders: {{TEAM_TITLE}}, {{TEAM_SUBTITLE}}, {{TEAM_1~3_NAME/ROLE/BIO/IMAGE}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Placeholders: {{TEAM_TITLE}}, {{TEAM_SUBTITLE}},
+                {{TEAM_1_NAME}}, {{TEAM_1_ROLE}}, {{TEAM_1_BIO}}, {{TEAM_1_IMAGE}},
+                {{TEAM_2_NAME}}, {{TEAM_2_ROLE}}, {{TEAM_2_BIO}}, {{TEAM_2_IMAGE}},
+                {{TEAM_3_NAME}}, {{TEAM_3_ROLE}}, {{TEAM_3_BIO}}, {{TEAM_3_IMAGE}}
 ============================================================ -->
-
-<!-- TODO: Build Team Variant 1 ??3-column cards: photo + name + role + bio -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-5xl px-4">
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{TEAM_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{TEAM_TITLE}}</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 ring-4 ring-primary/20">
+          <img src="{{TEAM_1_IMAGE}}" alt="{{TEAM_1_NAME}}" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-lg">{{TEAM_1_NAME}}</h3>
+        <p class="text-primary text-sm font-medium mb-2">{{TEAM_1_ROLE}}</p>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{TEAM_1_BIO}}</p>
+      </div>
+      <div class="text-center">
+        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 ring-4 ring-primary/20">
+          <img src="{{TEAM_2_IMAGE}}" alt="{{TEAM_2_NAME}}" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-lg">{{TEAM_2_NAME}}</h3>
+        <p class="text-primary text-sm font-medium mb-2">{{TEAM_2_ROLE}}</p>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{TEAM_2_BIO}}</p>
+      </div>
+      <div class="text-center">
+        <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 ring-4 ring-primary/20">
+          <img src="{{TEAM_3_IMAGE}}" alt="{{TEAM_3_NAME}}" class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-bold text-lg">{{TEAM_3_NAME}}</h3>
+        <p class="text-primary text-sm font-medium mb-2">{{TEAM_3_ROLE}}</p>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{TEAM_3_BIO}}</p>
+      </div>
+    </div>
   </div>
 </section>

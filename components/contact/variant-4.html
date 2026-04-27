@@ -1,21 +1,30 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Contact
   Variant     : 4
-  Layout      : Dark full-width background + large email + social links
-  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}}, {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Dark full-width background + oversized email + contact details
+  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
+                {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
 ============================================================ -->
-
-<!-- TODO: Build Contact Variant 4 ??Dark full-width background + large email + social links -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section id="contact" class="bg-neutral py-20 md:py-32">
+  <div class="container mx-auto max-w-5xl px-4 text-center">
+    <p class="text-neutral-content/50 font-semibold text-sm uppercase tracking-widest mb-4">{{CONTACT_SUBTITLE}}</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-neutral-content mb-8">{{CONTACT_TITLE}}</h2>
+    <!-- Oversized email -->
+    <a href="mailto:{{CONTACT_EMAIL}}" class="block text-2xl md:text-4xl lg:text-5xl font-black text-primary hover:opacity-80 transition-opacity break-all mb-12">
+      {{CONTACT_EMAIL}}
+    </a>
+    <!-- Divider -->
+    <div class="divider divider-neutral opacity-30 max-w-xs mx-auto mb-10"></div>
+    <!-- Info row -->
+    <div class="flex flex-col sm:flex-row justify-center gap-8 text-neutral-content/70">
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">📞</span>
+        <a href="tel:{{CONTACT_PHONE}}" class="hover:text-neutral-content transition-colors">{{CONTACT_PHONE}}</a>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <span class="text-2xl">📍</span>
+        <p>{{CONTACT_ADDRESS}}</p>
+      </div>
+    </div>
   </div>
 </section>

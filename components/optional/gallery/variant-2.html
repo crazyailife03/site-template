@@ -1,21 +1,59 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Gallery
   Variant     : 2
-  Layout      : Masonry irregular grid
-  Placeholders: {{GALLERY_TITLE}}, {{GALLERY_SUBTITLE}}, {{GALLERY_1~6_IMAGE/CAPTION}} (use .img-placeholder when no image)
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Masonry-style grid (featured large + smaller tiles)
+  Placeholders: {{GALLERY_TITLE}}, {{GALLERY_SUBTITLE}},
+                {{GALLERY_1_IMAGE}} ~ {{GALLERY_6_IMAGE}},
+                {{GALLERY_1_CAPTION}} ~ {{GALLERY_6_CAPTION}}
+  Note        : Use .img-placeholder class when no image is provided
 ============================================================ -->
-
-<!-- TODO: Build Gallery Variant 2 ??Masonry irregular grid -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{GALLERY_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{GALLERY_TITLE}}</h2>
+    </div>
+    <!-- Masonry layout using CSS grid rows -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px]">
+      <!-- Large featured item (spans 2 rows) -->
+      <div class="relative group overflow-hidden rounded-xl row-span-2">
+        <img src="{{GALLERY_1_IMAGE}}" alt="{{GALLERY_1_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+          <p class="text-white text-sm font-medium">{{GALLERY_1_CAPTION}}</p>
+        </div>
+      </div>
+      <!-- Regular items -->
+      <div class="relative group overflow-hidden rounded-xl">
+        <img src="{{GALLERY_2_IMAGE}}" alt="{{GALLERY_2_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+          <p class="text-white text-sm font-medium">{{GALLERY_2_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl">
+        <img src="{{GALLERY_3_IMAGE}}" alt="{{GALLERY_3_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+          <p class="text-white text-sm font-medium">{{GALLERY_3_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl">
+        <img src="{{GALLERY_4_IMAGE}}" alt="{{GALLERY_4_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+          <p class="text-white text-sm font-medium">{{GALLERY_4_CAPTION}}</p>
+        </div>
+      </div>
+      <!-- Second large item -->
+      <div class="relative group overflow-hidden rounded-xl row-span-2 col-start-3 row-start-1 hidden md:block">
+        <img src="{{GALLERY_5_IMAGE}}" alt="{{GALLERY_5_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+          <p class="text-white text-sm font-medium">{{GALLERY_5_CAPTION}}</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-xl">
+        <img src="{{GALLERY_6_IMAGE}}" alt="{{GALLERY_6_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
+          <p class="text-white text-sm font-medium">{{GALLERY_6_CAPTION}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

@@ -1,21 +1,53 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Features
   Variant     : 3
-  Layout      : Alternating image-left/image-right rows
-  Placeholders: {{FEATURES_TITLE}}, {{FEATURES_SUBTITLE}}, {{FEATURE_1~6_ICON/TITLE/DESC}} (items 4~6 use block markers)
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Alternating image-left / image-right rows (up to 3 pairs)
+  Placeholders: {{FEATURES_TITLE}}, {{FEATURES_SUBTITLE}},
+                {{FEATURE_1_ICON}} ~ {{FEATURE_3_ICON}} (used as accent emoji),
+                {{FEATURE_1_TITLE}} ~ {{FEATURE_3_TITLE}},
+                {{FEATURE_1_DESC}} ~ {{FEATURE_3_DESC}},
+                {{FEATURE_1_IMAGE}} ~ {{FEATURE_3_IMAGE}}
+  Note        : This variant uses images per row, not icons grid
 ============================================================ -->
-
-<!-- TODO: Build Features Variant 3 ??Alternating image-left/image-right rows -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{FEATURES_TITLE}}</h2>
+    </div>
+    <!-- Row 1: text left, image right -->
+    <div class="flex flex-col md:flex-row items-center gap-10 mb-16">
+      <div class="flex-1 text-center md:text-left">
+        <div class="text-4xl mb-3">{{FEATURE_1_ICON}}</div>
+        <h3 class="text-2xl font-bold mb-4">{{FEATURE_1_TITLE}}</h3>
+        <p class="text-base-content/60 leading-relaxed">{{FEATURE_1_DESC}}</p>
+      </div>
+      <div class="flex-1 w-full">
+        <img src="{{FEATURE_1_IMAGE}}" alt="{{FEATURE_1_TITLE}}" class="w-full rounded-2xl shadow-lg object-cover aspect-video">
+      </div>
+    </div>
+    <!-- Row 2: image left, text right -->
+    <div class="flex flex-col-reverse md:flex-row items-center gap-10 mb-16">
+      <div class="flex-1 w-full">
+        <img src="{{FEATURE_2_IMAGE}}" alt="{{FEATURE_2_TITLE}}" class="w-full rounded-2xl shadow-lg object-cover aspect-video">
+      </div>
+      <div class="flex-1 text-center md:text-left">
+        <div class="text-4xl mb-3">{{FEATURE_2_ICON}}</div>
+        <h3 class="text-2xl font-bold mb-4">{{FEATURE_2_TITLE}}</h3>
+        <p class="text-base-content/60 leading-relaxed">{{FEATURE_2_DESC}}</p>
+      </div>
+    </div>
+    <!-- Row 3: text left, image right -->
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1 text-center md:text-left">
+        <div class="text-4xl mb-3">{{FEATURE_3_ICON}}</div>
+        <h3 class="text-2xl font-bold mb-4">{{FEATURE_3_TITLE}}</h3>
+        <p class="text-base-content/60 leading-relaxed">{{FEATURE_3_DESC}}</p>
+      </div>
+      <div class="flex-1 w-full">
+        <img src="{{FEATURE_3_IMAGE}}" alt="{{FEATURE_3_TITLE}}" class="w-full rounded-2xl shadow-lg object-cover aspect-video">
+      </div>
+    </div>
   </div>
 </section>

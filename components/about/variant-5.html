@@ -1,21 +1,51 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : About
   Variant     : 5
-  Layout      : Timeline layout (brand history / milestones)
-  Placeholders: {{ABOUT_TITLE}}, {{ABOUT_SUBTITLE}}, {{ABOUT_TEXT}}, {{ABOUT_CTA}}, {{ABOUT_IMAGE}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Timeline (brand history / milestones)
+  Placeholders: {{ABOUT_TITLE}}, {{ABOUT_SUBTITLE}}, {{ABOUT_TEXT}}, {{ABOUT_CTA}},
+                {{MILESTONE_1_YEAR}}, {{MILESTONE_1_TITLE}}, {{MILESTONE_1_DESC}},
+                {{MILESTONE_2_YEAR}}, {{MILESTONE_2_TITLE}}, {{MILESTONE_2_DESC}},
+                {{MILESTONE_3_YEAR}}, {{MILESTONE_3_TITLE}}, {{MILESTONE_3_DESC}},
+                {{MILESTONE_4_YEAR}}, {{MILESTONE_4_TITLE}}, {{MILESTONE_4_DESC}}
 ============================================================ -->
-
-<!-- TODO: Build About Variant 5 ??Timeline layout (brand history / milestones) -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-4xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{ABOUT_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ABOUT_TITLE}}</h2>
+      <p class="text-base-content/60 max-w-2xl mx-auto">{{ABOUT_TEXT}}</p>
+    </div>
+    <!-- Timeline -->
+    <ol class="relative border-l-2 border-primary/30 ml-4 md:ml-8 space-y-10">
+      <li class="ml-6">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-primary rounded-full ring-4 ring-base-100"></span>
+        <time class="text-primary font-bold text-sm mb-1 block">{{MILESTONE_1_YEAR}}</time>
+        <h3 class="text-lg font-bold mb-1">{{MILESTONE_1_TITLE}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{MILESTONE_1_DESC}}</p>
+      </li>
+      <li class="ml-6">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-primary rounded-full ring-4 ring-base-100"></span>
+        <time class="text-primary font-bold text-sm mb-1 block">{{MILESTONE_2_YEAR}}</time>
+        <h3 class="text-lg font-bold mb-1">{{MILESTONE_2_TITLE}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{MILESTONE_2_DESC}}</p>
+      </li>
+      <li class="ml-6">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-primary rounded-full ring-4 ring-base-100"></span>
+        <time class="text-primary font-bold text-sm mb-1 block">{{MILESTONE_3_YEAR}}</time>
+        <h3 class="text-lg font-bold mb-1">{{MILESTONE_3_TITLE}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{MILESTONE_3_DESC}}</p>
+      </li>
+      <li class="ml-6">
+        <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-secondary rounded-full ring-4 ring-base-100"></span>
+        <time class="text-secondary font-bold text-sm mb-1 block">{{MILESTONE_4_YEAR}}</time>
+        <h3 class="text-lg font-bold mb-1">{{MILESTONE_4_TITLE}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{MILESTONE_4_DESC}}</p>
+      </li>
+    </ol>
+    <!-- CTA -->
+    <div class="text-center mt-12">
+      <a href="#contact" class="btn btn-primary">{{ABOUT_CTA}}</a>
+    </div>
   </div>
 </section>

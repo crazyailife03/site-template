@@ -1,21 +1,29 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Contact
   Variant     : 5
-  Layout      : CTA headline on top + minimal single-column form below
-  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}}, {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : CTA headline top + minimal single-column form centered
+  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
+                {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
 ============================================================ -->
-
-<!-- TODO: Build Contact Variant 5 ??CTA headline on top + minimal single-column form below -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section id="contact" class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{CONTACT_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">{{CONTACT_TITLE}}</h2>
+      <p class="text-base-content/60">
+        <a href="mailto:{{CONTACT_EMAIL}}" class="hover:text-primary transition-colors">{{CONTACT_EMAIL}}</a>
+        &nbsp;·&nbsp;
+        <a href="tel:{{CONTACT_PHONE}}" class="hover:text-primary transition-colors">{{CONTACT_PHONE}}</a>
+      </p>
+    </div>
+    <!-- Minimal form -->
+    <form class="space-y-4">
+      <input type="text" placeholder="Your name" class="input input-bordered w-full">
+      <input type="email" placeholder="Email address" class="input input-bordered w-full">
+      <textarea class="textarea textarea-bordered h-32 w-full" placeholder="Your message..."></textarea>
+      <button type="submit" class="btn btn-primary w-full">Send Message</button>
+    </form>
+    <p class="text-center text-xs text-base-content/40 mt-4">{{CONTACT_ADDRESS}}</p>
   </div>
 </section>

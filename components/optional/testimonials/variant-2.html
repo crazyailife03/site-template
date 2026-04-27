@@ -1,21 +1,43 @@
-﻿<!-- ============================================================
+<!-- ============================================================
   Section     : Testimonials
   Variant     : 2
-  Layout      : Large quote single-item carousel
-  Placeholders: {{TESTIMONIALS_TITLE}}, {{TESTIMONIALS_SUBTITLE}}, {{TESTIMONIAL_1~3_TEXT/NAME/ROLE}}
-
-  Rules:
-  - Use Tailwind CSS utility classes + DaisyUI components
-  - No inline style attributes
-  - All text content must use {{PLACEHOLDER}} format
-  - Must support RWD (mobile-first, use md: lg: prefixes)
-  - Images: show img tag when value exists, use .img-placeholder when empty
-  - Variable-count items use {{#ITEM_N}}...{{/ITEM_N}} block markers
+  Layout      : Large centered quote, tab-style switcher for 3 reviews
+  Placeholders: {{TESTIMONIALS_TITLE}}, {{TESTIMONIALS_SUBTITLE}},
+                {{TESTIMONIAL_1_TEXT}}, {{TESTIMONIAL_1_NAME}}, {{TESTIMONIAL_1_ROLE}},
+                {{TESTIMONIAL_2_TEXT}}, {{TESTIMONIAL_2_NAME}}, {{TESTIMONIAL_2_ROLE}},
+                {{TESTIMONIAL_3_TEXT}}, {{TESTIMONIAL_3_NAME}}, {{TESTIMONIAL_3_ROLE}}
+  Note        : data-tab / data-tab-content triggers script.js tab switcher
 ============================================================ -->
-
-<!-- TODO: Build Testimonials Variant 2 ??Large quote single-item carousel -->
-<section>
-  <div class="container mx-auto px-4">
-    <!-- Write template HTML here -->
+<section class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-3xl px-4 text-center">
+    <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{TESTIMONIALS_SUBTITLE}}</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">{{TESTIMONIALS_TITLE}}</h2>
+    <!-- Quote panels -->
+    <div class="mb-8 min-h-48">
+      <div data-tab-content="t1">
+        <p class="text-5xl text-primary/30 font-serif leading-none mb-4">"</p>
+        <p class="text-xl md:text-2xl text-base-content/80 leading-relaxed italic mb-6">{{TESTIMONIAL_1_TEXT}}</p>
+        <p class="font-bold">{{TESTIMONIAL_1_NAME}}</p>
+        <p class="text-sm text-base-content/50">{{TESTIMONIAL_1_ROLE}}</p>
+      </div>
+      <div data-tab-content="t2" class="hidden">
+        <p class="text-5xl text-primary/30 font-serif leading-none mb-4">"</p>
+        <p class="text-xl md:text-2xl text-base-content/80 leading-relaxed italic mb-6">{{TESTIMONIAL_2_TEXT}}</p>
+        <p class="font-bold">{{TESTIMONIAL_2_NAME}}</p>
+        <p class="text-sm text-base-content/50">{{TESTIMONIAL_2_ROLE}}</p>
+      </div>
+      <div data-tab-content="t3" class="hidden">
+        <p class="text-5xl text-primary/30 font-serif leading-none mb-4">"</p>
+        <p class="text-xl md:text-2xl text-base-content/80 leading-relaxed italic mb-6">{{TESTIMONIAL_3_TEXT}}</p>
+        <p class="font-bold">{{TESTIMONIAL_3_NAME}}</p>
+        <p class="text-sm text-base-content/50">{{TESTIMONIAL_3_ROLE}}</p>
+      </div>
+    </div>
+    <!-- Dot switchers -->
+    <div class="flex justify-center gap-3">
+      <button data-tab="t1" class="tab w-3 h-3 rounded-full bg-primary tab-active"></button>
+      <button data-tab="t2" class="tab w-3 h-3 rounded-full bg-base-300"></button>
+      <button data-tab="t3" class="tab w-3 h-3 rounded-full bg-base-300"></button>
+    </div>
   </div>
 </section>
