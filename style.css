@@ -1,4 +1,4 @@
-﻿/* style.css ??custom overrides only, Tailwind + DaisyUI loaded via CDN */
+/* style.css — custom overrides only, Tailwind + DaisyUI loaded via CDN */
 
 html {
   scroll-behavior: smooth;
@@ -17,4 +17,136 @@ html {
 /* Transparent header transition (Header Variant 3) */
 [data-header="transparent"] {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ============================================================
+   Scroll Reveal — fade + slide up on entry
+   Uses IntersectionObserver (see script.js). Elements start
+   invisible and gain .is-visible when they enter the viewport.
+============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger siblings inside a reveal parent */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-stagger.is-visible > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0s;    }
+.reveal-stagger.is-visible > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.1s;  }
+.reveal-stagger.is-visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.2s;  }
+.reveal-stagger.is-visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.3s;  }
+.reveal-stagger.is-visible > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.4s;  }
+.reveal-stagger.is-visible > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.5s;  }
+
+/* ============================================================
+   Hero entrance animation (plays once on load)
+============================================================ */
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#hero .hero-content,
+#hero .hero > *:first-child {
+  animation: heroFadeIn 0.8s ease both;
+}
+
+/* ============================================================
+   DaisyUI card interactions
+============================================================ */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px oklch(var(--p) / 0.12);
+}
+
+/* ============================================================
+   Button press / ripple feedback
+============================================================ */
+.btn {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ============================================================
+   Stats counter pop-in
+============================================================ */
+@keyframes statPop {
+  0%   { opacity: 0; transform: scale(0.75); }
+  80%  { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.stat.is-visible .stat-value {
+  animation: statPop 0.5s ease both;
+}
+
+/* ============================================================
+   FAQ / collapse smooth open
+============================================================ */
+.collapse-content {
+  transition: padding 0.3s ease;
+}
+
+/* ============================================================
+   Badge / tag hover
+============================================================ */
+.badge {
+  transition: transform 0.15s ease;
+}
+.badge:hover {
+  transform: scale(1.08);
+}
+
+/* ============================================================
+   Pricing card highlight pulse
+============================================================ */
+@keyframes softPulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(var(--p) / 0.25); }
+  50%       { box-shadow: 0 0 0 8px oklch(var(--p) / 0); }
+}
+.card.border-primary {
+  animation: softPulse 2.5s ease infinite;
+}
+
+/* ============================================================
+   Avatar hover scale
+============================================================ */
+.avatar {
+  transition: transform 0.2s ease;
+}
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================================
+   Link underline slide-in
+============================================================ */
+.link-animated {
+  position: relative;
+  text-decoration: none;
+}
+.link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: oklch(var(--p));
+  transition: width 0.25s ease;
+}
+.link-animated:hover::after {
+  width: 100%;
 }
