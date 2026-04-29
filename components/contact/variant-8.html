@@ -1,0 +1,46 @@
+<!-- ============================================================
+  Section     : Contact
+  Variant     : 8
+  Layout      : Dark neutral background + centered form with light inputs
+  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
+                {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
+============================================================ -->
+<section id="contact" class="bg-neutral py-16 md:py-24">
+  <div class="container mx-auto max-w-2xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-3">{{CONTACT_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-neutral-content">{{CONTACT_TITLE}}</h2>
+    </div>
+    <!-- Form -->
+    <form class="space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="form-control">
+          <input type="text" placeholder="姓名" class="input input-bordered bg-neutral-content/10 border-neutral-content/20 text-neutral-content placeholder-neutral-content/40 w-full focus:border-primary">
+        </div>
+        <div class="form-control">
+          <input type="email" placeholder="Email" class="input input-bordered bg-neutral-content/10 border-neutral-content/20 text-neutral-content placeholder-neutral-content/40 w-full focus:border-primary">
+        </div>
+      </div>
+      <div class="form-control">
+        <input type="text" placeholder="主旨" class="input input-bordered bg-neutral-content/10 border-neutral-content/20 text-neutral-content placeholder-neutral-content/40 w-full focus:border-primary">
+      </div>
+      <div class="form-control">
+        <textarea class="textarea textarea-bordered h-36 bg-neutral-content/10 border-neutral-content/20 text-neutral-content placeholder-neutral-content/40 w-full focus:border-primary" placeholder="請輸入您的訊息..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-full btn-lg">送出訊息</button>
+    </form>
+    <!-- Contact info footnote -->
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8 text-neutral-content/50 text-sm text-center">
+      <a href="mailto:{{CONTACT_EMAIL}}" class="hover:text-primary transition-colors flex items-center gap-2 justify-center">
+        <i class="fa-solid fa-envelope"></i>{{CONTACT_EMAIL}}
+      </a>
+      <span class="hidden sm:inline opacity-30">·</span>
+      <a href="tel:{{CONTACT_PHONE}}" class="hover:text-primary transition-colors flex items-center gap-2 justify-center">
+        <i class="fa-solid fa-phone"></i>{{CONTACT_PHONE}}
+      </a>
+      <span class="hidden sm:inline opacity-30">·</span>
+      <span class="flex items-center gap-2 justify-center"><i class="fa-solid fa-location-dot"></i>{{CONTACT_ADDRESS}}</span>
+    </div>
+  </div>
+</section>

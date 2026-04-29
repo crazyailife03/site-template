@@ -1,0 +1,28 @@
+<!-- ============================================================
+  Section     : Contact
+  Variant     : 7
+  Layout      : Large centered CTA + two action buttons (email + phone) — no form
+  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
+                {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}
+  Note        : No form, no address — conversion-focused button CTA
+============================================================ -->
+<section id="contact" class="bg-base-100 py-20 md:py-32">
+  <div class="container mx-auto max-w-3xl px-4 text-center">
+    <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-4">{{CONTACT_SUBTITLE}}</p>
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">{{CONTACT_TITLE}}</h2>
+    <div class="w-16 h-1 bg-primary rounded mx-auto mb-10"></div>
+    <!-- Action buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="mailto:{{CONTACT_EMAIL}}"
+         class="btn btn-primary btn-lg gap-3 px-8">
+        <i class="fa-solid fa-envelope"></i>
+        {{CONTACT_EMAIL}}
+      </a>
+      <a href="tel:{{CONTACT_PHONE}}"
+         class="btn btn-outline btn-lg gap-3 px-8">
+        <i class="fa-solid fa-phone"></i>
+        {{CONTACT_PHONE}}
+      </a>
+    </div>
+  </div>
+</section>

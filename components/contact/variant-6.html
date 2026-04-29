@@ -1,0 +1,71 @@
+<!-- ============================================================
+  Section     : Contact
+  Variant     : 6
+  Layout      : Primary-color left panel (info) + white card right (form)
+  Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
+                {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
+============================================================ -->
+<section id="contact" class="bg-primary py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+      <!-- Left: info on primary bg -->
+      <div class="lg:w-5/12 text-primary-content">
+        <p class="text-primary-content/60 font-semibold text-sm uppercase tracking-widest mb-3">{{CONTACT_SUBTITLE}}</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">{{CONTACT_TITLE}}</h2>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-primary-content/15 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-envelope text-primary-content text-lg"></i>
+            </div>
+            <div>
+              <p class="text-primary-content/50 text-xs uppercase tracking-widest mb-0.5">Email</p>
+              <a href="mailto:{{CONTACT_EMAIL}}" class="font-medium hover:opacity-80 transition-opacity break-all">{{CONTACT_EMAIL}}</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-primary-content/15 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-phone text-primary-content text-lg"></i>
+            </div>
+            <div>
+              <p class="text-primary-content/50 text-xs uppercase tracking-widest mb-0.5">Phone</p>
+              <a href="tel:{{CONTACT_PHONE}}" class="font-medium hover:opacity-80 transition-opacity">{{CONTACT_PHONE}}</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-primary-content/15 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-location-dot text-primary-content text-lg"></i>
+            </div>
+            <div>
+              <p class="text-primary-content/50 text-xs uppercase tracking-widest mb-0.5">Address</p>
+              <p class="font-medium">{{CONTACT_ADDRESS}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Right: form card -->
+      <div class="flex-1 w-full bg-base-100 rounded-3xl p-8 md:p-10 shadow-2xl">
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text font-medium">姓名</span></label>
+              <input type="text" placeholder="您的姓名" class="input input-bordered w-full">
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text font-medium">Email</span></label>
+              <input type="email" placeholder="your@email.com" class="input input-bordered w-full">
+            </div>
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text font-medium">主旨</span></label>
+            <input type="text" placeholder="如何協助您？" class="input input-bordered w-full">
+          </div>
+          <div class="form-control">
+            <label class="label"><span class="label-text font-medium">訊息</span></label>
+            <textarea class="textarea textarea-bordered h-32 w-full" placeholder="請詳細說明您的需求..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">送出訊息</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
