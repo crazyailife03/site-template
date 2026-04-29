@@ -1,0 +1,26 @@
+<!-- ============================================================
+  Section     : About
+  Variant     : 6
+  Layout      : Split columns — primary-color left panel + text right, no image
+  Placeholders: {{ABOUT_TITLE}}, {{ABOUT_SUBTITLE}}, {{ABOUT_TEXT}}, {{ABOUT_CTA}}
+  Note        : No image required — visual impact from color split
+============================================================ -->
+<section id="about" class="bg-base-100">
+  <div class="flex flex-col lg:flex-row min-h-[480px]">
+    <!-- Left: primary color panel -->
+    <div class="lg:w-5/12 bg-primary text-primary-content flex items-center justify-center py-16 md:py-24 px-8 md:px-14">
+      <div class="max-w-xs text-center lg:text-left">
+        <p class="text-primary-content/60 font-semibold text-sm uppercase tracking-widest mb-4">{{ABOUT_SUBTITLE}}</p>
+        <h2 class="text-3xl md:text-4xl font-black leading-tight mb-8">{{ABOUT_TITLE}}</h2>
+        <a href="#contact" class="btn btn-neutral btn-lg">{{ABOUT_CTA}}</a>
+      </div>
+    </div>
+    <!-- Right: text content -->
+    <div class="lg:w-7/12 bg-base-100 flex items-center py-16 md:py-24 px-8 md:px-14 lg:px-20">
+      <div class="max-w-lg">
+        <div class="w-10 h-1 bg-primary rounded mb-6"></div>
+        <p class="text-base-content/70 text-lg leading-relaxed">{{ABOUT_TEXT}}</p>
+      </div>
+    </div>
+  </div>
+</section>

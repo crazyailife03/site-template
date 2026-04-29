@@ -1,0 +1,24 @@
+<!-- ============================================================
+  Section     : About
+  Variant     : 8
+  Layout      : Centered bordered card with elegant framing, no image
+  Placeholders: {{ABOUT_TITLE}}, {{ABOUT_SUBTITLE}}, {{ABOUT_TEXT}}, {{ABOUT_CTA}}
+  Note        : No image required — elegant card frame provides visual structure
+============================================================ -->
+<section id="about" class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-4xl px-4">
+    <div class="bg-base-100 border border-base-300 rounded-3xl px-8 py-12 md:px-16 md:py-16 shadow-sm text-center relative overflow-hidden">
+      <!-- Decorative corner accent -->
+      <div class="absolute top-0 left-0 w-32 h-32 bg-primary/6 rounded-br-full pointer-events-none"></div>
+      <div class="absolute bottom-0 right-0 w-24 h-24 bg-secondary/6 rounded-tl-full pointer-events-none"></div>
+      <!-- Content -->
+      <div class="relative z-10">
+        <span class="badge badge-primary badge-outline mb-6 px-4 py-2 text-xs uppercase tracking-widest font-semibold">{{ABOUT_SUBTITLE}}</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">{{ABOUT_TITLE}}</h2>
+        <div class="w-12 h-1 bg-primary rounded mx-auto mb-6"></div>
+        <p class="text-base-content/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">{{ABOUT_TEXT}}</p>
+        <a href="#contact" class="btn btn-primary btn-lg px-10">{{ABOUT_CTA}}</a>
+      </div>
+    </div>
+  </div>
+</section>

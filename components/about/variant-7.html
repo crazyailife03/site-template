@@ -1,0 +1,28 @@
+<!-- ============================================================
+  Section     : About
+  Variant     : 7
+  Layout      : Text left + image bleeds to right edge (cinematic half-bleed)
+  Placeholders: {{ABOUT_TITLE}}, {{ABOUT_SUBTITLE}}, {{ABOUT_TEXT}},
+                {{ABOUT_CTA}}, {{ABOUT_IMAGE}}
+============================================================ -->
+<section id="about" class="bg-base-200 py-16 md:py-24 overflow-hidden">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      <!-- Text -->
+      <div class="flex-1 text-center lg:text-left">
+        <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-3">{{ABOUT_SUBTITLE}}</p>
+        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">{{ABOUT_TITLE}}</h2>
+        <p class="text-base-content/60 leading-relaxed mb-8 text-base">{{ABOUT_TEXT}}</p>
+        <a href="#contact" class="btn btn-primary btn-lg">{{ABOUT_CTA}}</a>
+      </div>
+      <!-- Image: bleed to the right on desktop -->
+      <div class="flex-1 w-full lg:translate-x-8 lg:mr-[-2rem]">
+        <img
+          src="{{ABOUT_IMAGE}}"
+          alt="{{ABOUT_TITLE}}"
+          class="w-full h-auto object-cover rounded-2xl lg:rounded-l-2xl lg:rounded-r-none shadow-2xl aspect-[4/3]"
+        >
+      </div>
+    </div>
+  </div>
+</section>
