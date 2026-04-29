@@ -1,0 +1,44 @@
+<!-- ============================================================
+  Section     : Header
+  Variant     : 8
+  Layout      : Primary-colored background navbar
+  Placeholders: {{COMPANY_NAME}}, {{NAV_1}}~{{NAV_5}},
+                {{NAV_1_HREF}}~{{NAV_5_HREF}}, {{HEADER_CTA}}
+============================================================ -->
+<header class="bg-primary text-primary-content sticky top-0 z-50 shadow-md">
+  <div class="navbar container mx-auto max-w-6xl px-4">
+    <div class="navbar-start">
+      <a href="#" class="text-xl font-bold text-primary-content">{{COMPANY_NAME}}</a>
+    </div>
+    <nav class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal gap-1 text-sm font-medium">
+        <li><a href="{{NAV_1_HREF}}" class="text-primary-content/80 hover:text-primary-content hover:bg-primary-content/10 rounded-lg transition-colors">{{NAV_1}}</a></li>
+        <li><a href="{{NAV_2_HREF}}" class="text-primary-content/80 hover:text-primary-content hover:bg-primary-content/10 rounded-lg transition-colors">{{NAV_2}}</a></li>
+        <li><a href="{{NAV_3_HREF}}" class="text-primary-content/80 hover:text-primary-content hover:bg-primary-content/10 rounded-lg transition-colors">{{NAV_3}}</a></li>
+        <li><a href="{{NAV_4_HREF}}" class="text-primary-content/80 hover:text-primary-content hover:bg-primary-content/10 rounded-lg transition-colors">{{NAV_4}}</a></li>
+        <li><a href="{{NAV_5_HREF}}" class="text-primary-content/80 hover:text-primary-content hover:bg-primary-content/10 rounded-lg transition-colors">{{NAV_5}}</a></li>
+      </ul>
+    </nav>
+    <div class="navbar-end gap-2">
+      <a href="#contact" class="btn btn-outline btn-sm border-primary-content text-primary-content hover:bg-primary-content hover:text-primary hidden lg:flex">{{HEADER_CTA}}</a>
+      <button class="btn btn-ghost btn-square text-primary-content lg:hidden" onclick="toggleMobileMenu()">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-primary-content/20 bg-primary">
+    <ul class="menu p-4 gap-1">
+      <li><a href="{{NAV_1_HREF}}" class="text-primary-content/80 hover:text-primary-content">{{NAV_1}}</a></li>
+      <li><a href="{{NAV_2_HREF}}" class="text-primary-content/80 hover:text-primary-content">{{NAV_2}}</a></li>
+      <li><a href="{{NAV_3_HREF}}" class="text-primary-content/80 hover:text-primary-content">{{NAV_3}}</a></li>
+      <li><a href="{{NAV_4_HREF}}" class="text-primary-content/80 hover:text-primary-content">{{NAV_4}}</a></li>
+      <li><a href="{{NAV_5_HREF}}" class="text-primary-content/80 hover:text-primary-content">{{NAV_5}}</a></li>
+    </ul>
+    <div class="px-4 pb-4">
+      <a href="#contact" class="btn btn-outline btn-sm border-primary-content text-primary-content w-full hover:bg-primary-content hover:text-primary">{{HEADER_CTA}}</a>
+    </div>
+  </div>
+</header>
