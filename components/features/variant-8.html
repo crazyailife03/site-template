@@ -1,0 +1,46 @@
+<!-- ============================================================
+  Section     : Features
+  Variant     : 8
+  Layout      : Dark neutral background with bordered glass-style cards
+  Placeholders: {{FEATURES_TITLE}}, {{FEATURES_SUBTITLE}},
+                {{FEATURE_1_ICON}} ~ {{FEATURE_3_ICON}},
+                {{FEATURE_1_TITLE}} ~ {{FEATURE_3_TITLE}},
+                {{FEATURE_1_DESC}} ~ {{FEATURE_3_DESC}}
+  Note        : Fixed 3 features, no image required. Dark premium look.
+============================================================ -->
+<section id="features" class="bg-neutral py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-neutral-content">{{FEATURES_TITLE}}</h2>
+    </div>
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="rounded-2xl border border-neutral-content/15 bg-neutral-content/5 p-8 hover:border-primary/50 hover:bg-neutral-content/10 transition-all duration-300 group">
+        <div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+          <i class="{{FEATURE_1_ICON}} text-primary text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl text-neutral-content mb-3">{{FEATURE_1_TITLE}}</h3>
+        <p class="text-neutral-content/50 text-sm leading-relaxed">{{FEATURE_1_DESC}}</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="rounded-2xl border border-neutral-content/15 bg-neutral-content/5 p-8 hover:border-primary/50 hover:bg-neutral-content/10 transition-all duration-300 group">
+        <div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+          <i class="{{FEATURE_2_ICON}} text-primary text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl text-neutral-content mb-3">{{FEATURE_2_TITLE}}</h3>
+        <p class="text-neutral-content/50 text-sm leading-relaxed">{{FEATURE_2_DESC}}</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="rounded-2xl border border-neutral-content/15 bg-neutral-content/5 p-8 hover:border-primary/50 hover:bg-neutral-content/10 transition-all duration-300 group">
+        <div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+          <i class="{{FEATURE_3_ICON}} text-primary text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-xl text-neutral-content mb-3">{{FEATURE_3_TITLE}}</h3>
+        <p class="text-neutral-content/50 text-sm leading-relaxed">{{FEATURE_3_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>

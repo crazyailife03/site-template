@@ -1,0 +1,69 @@
+<!-- ============================================================
+  Section     : Features
+  Variant     : 7
+  Layout      : Asymmetric — large main feature left + 3 compact features right
+  Placeholders: {{FEATURES_TITLE}}, {{FEATURES_SUBTITLE}},
+                {{FEATURE_1_ICON}} ~ {{FEATURE_4_ICON}},
+                {{FEATURE_1_TITLE}} ~ {{FEATURE_4_TITLE}},
+                {{FEATURE_1_DESC}} ~ {{FEATURE_4_DESC}}
+  Note        : Feature 1 = hero feature (large left); Features 2-4 = right column
+                No image required
+============================================================ -->
+<section id="features" class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{FEATURES_TITLE}}</h2>
+    </div>
+    <!-- Asymmetric grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+      <!-- Left: Main feature (3/5 width) -->
+      <div class="lg:col-span-3 bg-base-200 rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-72">
+        <div>
+          <div class="w-16 h-16 rounded-2xl bg-primary/15 flex items-center justify-center mb-6">
+            <i class="{{FEATURE_1_ICON}} text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">{{FEATURE_1_TITLE}}</h3>
+          <p class="text-base-content/60 leading-relaxed text-base">{{FEATURE_1_DESC}}</p>
+        </div>
+        <div class="mt-8">
+          <a href="#contact" class="btn btn-primary btn-sm">了解更多 →</a>
+        </div>
+      </div>
+      <!-- Right: 3 compact features (2/5 width) -->
+      <div class="lg:col-span-2 flex flex-col gap-4">
+        <!-- Feature 2 -->
+        <div class="bg-base-200 rounded-2xl p-6 flex gap-4 items-start flex-1">
+          <div class="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+            <i class="{{FEATURE_2_ICON}} text-primary text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base mb-1">{{FEATURE_2_TITLE}}</h3>
+            <p class="text-base-content/60 text-sm leading-relaxed">{{FEATURE_2_DESC}}</p>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-base-200 rounded-2xl p-6 flex gap-4 items-start flex-1">
+          <div class="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+            <i class="{{FEATURE_3_ICON}} text-primary text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base mb-1">{{FEATURE_3_TITLE}}</h3>
+            <p class="text-base-content/60 text-sm leading-relaxed">{{FEATURE_3_DESC}}</p>
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-base-200 rounded-2xl p-6 flex gap-4 items-start flex-1">
+          <div class="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+            <i class="{{FEATURE_4_ICON}} text-primary text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base mb-1">{{FEATURE_4_TITLE}}</h3>
+            <p class="text-base-content/60 text-sm leading-relaxed">{{FEATURE_4_DESC}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

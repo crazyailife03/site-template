@@ -1,0 +1,57 @@
+<!-- ============================================================
+  Section     : Features
+  Variant     : 6
+  Layout      : Horizontal process steps with numbered circles + connectors
+  Placeholders: {{FEATURES_TITLE}}, {{FEATURES_SUBTITLE}},
+                {{FEATURE_1_ICON}} ~ {{FEATURE_3_ICON}},
+                {{FEATURE_1_TITLE}} ~ {{FEATURE_3_TITLE}},
+                {{FEATURE_1_DESC}} ~ {{FEATURE_3_DESC}}
+  Note        : Fixed 3 steps, no image required
+============================================================ -->
+<section id="features" class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>
+      <h2 class="text-3xl md:text-4xl font-bold">{{FEATURES_TITLE}}</h2>
+    </div>
+    <!-- Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 relative">
+      <!-- Connector line (desktop only) -->
+      <div class="hidden md:block absolute top-10 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-primary/30 z-0"></div>
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center px-6 relative z-10">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg mb-6 relative">
+          <span class="text-primary-content font-black text-2xl">01</span>
+          <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-base-200 rounded-full border-2 border-primary flex items-center justify-center">
+            <i class="{{FEATURE_1_ICON}} text-primary text-sm"></i>
+          </div>
+        </div>
+        <h3 class="font-bold text-xl mb-3">{{FEATURE_1_TITLE}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{FEATURE_1_DESC}}</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center text-center px-6 relative z-10 mt-10 md:mt-0">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg mb-6 relative">
+          <span class="text-primary-content font-black text-2xl">02</span>
+          <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-base-200 rounded-full border-2 border-primary flex items-center justify-center">
+            <i class="{{FEATURE_2_ICON}} text-primary text-sm"></i>
+          </div>
+        </div>
+        <h3 class="font-bold text-xl mb-3">{{FEATURE_2_TITLE}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{FEATURE_2_DESC}}</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center text-center px-6 relative z-10 mt-10 md:mt-0">
+        <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg mb-6 relative">
+          <span class="text-primary-content font-black text-2xl">03</span>
+          <div class="absolute -bottom-1 -right-1 w-8 h-8 bg-base-200 rounded-full border-2 border-primary flex items-center justify-center">
+            <i class="{{FEATURE_3_ICON}} text-primary text-sm"></i>
+          </div>
+        </div>
+        <h3 class="font-bold text-xl mb-3">{{FEATURE_3_TITLE}}</h3>
+        <p class="text-base-content/60 text-sm leading-relaxed">{{FEATURE_3_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
