@@ -1,0 +1,30 @@
+<!-- ============================================================
+  Section     : Hero
+  Variant     : 7
+  Layout      : Centered text top + full-width image below (SaaS screenshot style)
+  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}},
+                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
+============================================================ -->
+<section id="hero" class="bg-base-100 pt-16 md:pt-24 overflow-hidden">
+  <!-- Text block -->
+  <div class="container mx-auto max-w-4xl px-4 text-center">
+    <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-4">{{HERO_SUBTITLE}}</p>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">{{HERO_TITLE}}</h1>
+    <p class="text-base-content/60 text-lg md:text-xl mb-8 max-w-2xl mx-auto">{{HERO_DESCRIPTION}}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
+      <a href="#contact" class="btn btn-primary btn-lg">{{CTA_PRIMARY}}</a>
+      <a href="#about" class="btn btn-ghost btn-lg">{{CTA_SECONDARY}}</a>
+    </div>
+  </div>
+  <!-- Image below — card frame style -->
+  <div class="max-w-5xl mx-auto px-4 md:px-8">
+    <div class="rounded-t-2xl overflow-hidden shadow-2xl border-t border-l border-r border-base-300 ring-1 ring-base-content/5">
+      <div class="bg-base-300 flex items-center gap-1.5 px-4 py-2.5">
+        <span class="w-3 h-3 rounded-full bg-error/60"></span>
+        <span class="w-3 h-3 rounded-full bg-warning/60"></span>
+        <span class="w-3 h-3 rounded-full bg-success/60"></span>
+      </div>
+      <img src="{{HERO_IMAGE}}" alt="{{HERO_TITLE}}" class="w-full object-cover object-top">
+    </div>
+  </div>
+</section>

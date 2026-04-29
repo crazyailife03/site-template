@@ -1,0 +1,27 @@
+<!-- ============================================================
+  Section     : Hero
+  Variant     : 8
+  Layout      : Full primary-color background, left-aligned bold text — NO image
+  Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}},
+                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}
+  Note        : No image required — brand color creates visual impact
+============================================================ -->
+<section id="hero" class="bg-primary text-primary-content min-h-[80vh] flex items-center relative overflow-hidden">
+  <!-- Decorative large numeral in background -->
+  <div class="absolute right-0 top-0 font-black select-none pointer-events-none leading-none text-primary-content/5" style="font-size:22rem">01</div>
+  <!-- Decorative circle -->
+  <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full border-2 border-primary-content/10 pointer-events-none"></div>
+  <div class="absolute -bottom-16 -right-16 w-64 h-64 rounded-full border border-primary-content/8 pointer-events-none"></div>
+  <!-- Content -->
+  <div class="container mx-auto max-w-6xl px-4 py-20 relative z-10">
+    <div class="max-w-3xl">
+      <p class="text-primary-content/60 font-semibold text-sm uppercase tracking-widest mb-5">{{HERO_SUBTITLE}}</p>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">{{HERO_TITLE}}</h1>
+      <p class="text-primary-content/80 text-xl md:text-2xl mb-10 max-w-xl font-light leading-relaxed">{{HERO_DESCRIPTION}}</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="btn btn-neutral btn-lg">{{CTA_PRIMARY}}</a>
+        <a href="#about" class="btn btn-outline border-primary-content text-primary-content hover:bg-primary-content hover:text-primary btn-lg">{{CTA_SECONDARY}}</a>
+      </div>
+    </div>
+  </div>
+</section>
