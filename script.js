@@ -40,6 +40,7 @@ document.querySelectorAll('[data-tab]').forEach(tab => {
 
 // ============================================================
 // Smooth scroll + close mobile menu on anchor click
+// 修正：補償固定導覽列高度，避免標題被遮住
 // ============================================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
@@ -47,7 +48,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (href === '#') return;
     e.preventDefault();
     const target = document.querySelector(href);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    if (target) {
+      const navbarHeight = document.querySelector('header, nav')?.offsetHeight || 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
     const mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenu) mobileMenu.classList.add('hidden');
   });
@@ -98,8 +103,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ============================================================
 // Stats counter animation
-// Looks for elements with data-count="NUMBER" and counts up
-// when they enter the viewport.
+// 用法：<span data-count="1000" data-count-suffix="+">1000</span>
 // ============================================================
 (function initCounters() {
   const counters = document.querySelectorAll('[data-count]');
@@ -120,7 +124,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           const progress = Math.min(elapsed / duration, 1);
           // ease-out cubic
           const eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.round(target * eased) + suffix;
+          el.textContent = Math.round(target * eased).toLocaleString() + suffix;
           if (progress < 1) requestAnimationFrame(tick);
         }
 
@@ -159,4 +163,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   );
 
   sections.forEach(sec => observer.observe(sec));
+})();
+
+// ============================================================
+// FAQ 手風琴（新版型使用 .faq-item / .faq-question / .faq-answer）
+// DaisyUI collapse 元件不需要此段，僅供自訂 FAQ 版型使用
+// ============================================================
+(function initFaq() {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    if (!btn || !answer) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('faq-open');
+      // 關閉其他已展開項目
+      document.querySelectorAll('.faq-item.faq-open').forEach(other => {
+        other.classList.remove('faq-open');
+        other.querySelector('.faq-answer')?.classList.add('hidden');
+      });
+      if (!isOpen) {
+        item.classList.add('faq-open');
+        answer.classList.remove('hidden');
+      }
+    });
+  });
 })();

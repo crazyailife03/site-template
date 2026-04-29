@@ -150,3 +150,122 @@ html {
 .link-animated:hover::after {
   width: 100%;
 }
+
+/* ============================================================
+   新增工具類別 — New Visual Utility Classes
+   供新版型模板使用，不影響現有模板
+============================================================ */
+
+/* 漸層文字標題 */
+.gradient-text {
+  background: linear-gradient(135deg, oklch(var(--p)), oklch(var(--s)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 玻璃態卡片 */
+.glass-card {
+  background: oklch(var(--b1) / 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid oklch(var(--b3) / 0.4);
+}
+
+/* 裝飾用大型半透明背景圖示 */
+.deco-icon {
+  position: absolute;
+  font-size: 11rem;
+  line-height: 1;
+  color: oklch(var(--p) / 0.06);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* 動態漸層背景（緩慢流動）*/
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+.animated-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(var(--p) / 0.12),
+    oklch(var(--s) / 0.10),
+    oklch(var(--a) / 0.08),
+    oklch(var(--p) / 0.12)
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+}
+
+/* 浮動動畫（裝飾圖示用）*/
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-10px) rotate(1deg); }
+  66%       { transform: translateY(-5px) rotate(-1deg); }
+}
+.float { animation: float 5s ease-in-out infinite; }
+
+/* 斜切分隔（新版型）*/
+.diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+  padding-bottom: 6rem;
+}
+.diagonal-top {
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 5rem;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* 點狀背景紋理 */
+.dot-pattern {
+  background-image: radial-gradient(oklch(var(--p) / 0.12) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
+/* 橫線背景紋理 */
+.line-pattern {
+  background-image: linear-gradient(oklch(var(--p) / 0.07) 1px, transparent 1px);
+  background-size: 100% 32px;
+}
+
+/* 圖示圓形底座 */
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: oklch(var(--p) / 0.12);
+  color: oklch(var(--p));
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* 捲動條樣式 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: oklch(var(--b2)); }
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--p) / 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: oklch(var(--p) / 0.7); }
+
+/* 無障礙：系統設定減少動畫時停用所有自訂動畫 */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animated-gradient { animation: none; }
+  .float             { animation: none; }
+  .card              { transition: none; }
+  #hero .hero-content,
+  #hero .hero > *:first-child { animation: none; }
+}
