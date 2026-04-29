@@ -1,0 +1,25 @@
+<!-- ============================================================
+  Section     : Footer
+  Variant     : 8
+  Layout      : Ultra-compact single-row — logo | links | copyright
+  Placeholders: {{COMPANY_NAME}}, {{FOOTER_TAGLINE}},
+                {{FOOTER_LINK_1}} ~ {{FOOTER_LINK_4}}, {{COPYRIGHT}}
+  Note        : Minimal height, ideal when contact section handles all detail
+============================================================ -->
+<footer class="bg-base-200 border-t border-base-300 py-5">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      <!-- Logo -->
+      <a href="#" class="font-bold text-primary shrink-0">{{COMPANY_NAME}}</a>
+      <!-- Links -->
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-1">
+        <a href="#" class="text-base-content/60 hover:text-primary transition-colors text-xs">{{FOOTER_LINK_1}}</a>
+        <a href="#" class="text-base-content/60 hover:text-primary transition-colors text-xs">{{FOOTER_LINK_2}}</a>
+        <a href="#" class="text-base-content/60 hover:text-primary transition-colors text-xs">{{FOOTER_LINK_3}}</a>
+        <a href="#" class="text-base-content/60 hover:text-primary transition-colors text-xs">{{FOOTER_LINK_4}}</a>
+      </nav>
+      <!-- Copyright -->
+      <p class="text-xs text-base-content/40 shrink-0">{{COPYRIGHT}}</p>
+    </div>
+  </div>
+</footer>

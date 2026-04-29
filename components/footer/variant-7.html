@@ -1,0 +1,38 @@
+<!-- ============================================================
+  Section     : Footer
+  Variant     : 7
+  Layout      : Light content area + dark copyright bar (two-section split)
+  Placeholders: {{COMPANY_NAME}}, {{FOOTER_TAGLINE}},
+                {{FOOTER_LINK_1}} ~ {{FOOTER_LINK_4}},
+                {{CONTACT_EMAIL}}, {{COPYRIGHT}}
+============================================================ -->
+<footer>
+  <!-- Upper: light content -->
+  <div class="bg-base-100 border-t border-base-200 py-12">
+    <div class="container mx-auto max-w-6xl px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+        <!-- Brand -->
+        <div class="max-w-xs">
+          <a href="#" class="text-xl font-bold text-primary block mb-2">{{COMPANY_NAME}}</a>
+          <p class="text-base-content/55 text-sm leading-relaxed">{{FOOTER_TAGLINE}}</p>
+          <a href="mailto:{{CONTACT_EMAIL}}" class="inline-block mt-4 text-sm text-primary hover:underline">{{CONTACT_EMAIL}}</a>
+        </div>
+        <!-- Links -->
+        <nav>
+          <ul class="grid grid-cols-2 gap-x-10 gap-y-2 text-sm text-base-content/65">
+            <li><a href="#" class="hover:text-primary transition-colors">{{FOOTER_LINK_1}}</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">{{FOOTER_LINK_3}}</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">{{FOOTER_LINK_2}}</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">{{FOOTER_LINK_4}}</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Lower: dark copyright bar -->
+  <div class="bg-neutral py-4">
+    <div class="container mx-auto max-w-6xl px-4 text-center text-xs text-neutral-content/40">
+      {{COPYRIGHT}}
+    </div>
+  </div>
+</footer>
