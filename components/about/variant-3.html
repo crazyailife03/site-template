@@ -3,10 +3,14 @@
   Variant     : 3
   Layout      : Full-width text only, brand manifesto style (no image)
   Placeholders: {{ABOUT_TITLE}}, {{ABOUT_SUBTITLE}}, {{ABOUT_TEXT}}, {{ABOUT_CTA}}
-  Note        : This variant intentionally has no image
 ============================================================ -->
-<section id="about" class="bg-neutral py-20 md:py-32">
-  <div class="container mx-auto max-w-4xl px-4 text-center">
+<section id="about" class="bg-neutral py-20 md:py-32 relative overflow-hidden">
+  <!-- Oversized decorative quote mark -->
+  <div class="absolute -top-8 left-4 md:left-12 text-neutral-content/[0.04] font-black select-none pointer-events-none leading-none" style="font-size:18rem;line-height:0.75">"</div>
+  <!-- Ring decoration bottom-right -->
+  <div class="absolute -bottom-16 -right-16 w-72 h-72 rounded-full border border-neutral-content/6 pointer-events-none"></div>
+  <div class="absolute -bottom-8 -right-8 w-44 h-44 rounded-full border border-neutral-content/8 pointer-events-none"></div>
+  <div class="container mx-auto max-w-4xl px-4 text-center relative z-10">
     <p class="text-neutral-content/50 font-semibold text-sm uppercase tracking-widest mb-4">{{ABOUT_SUBTITLE}}</p>
     <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-neutral-content mb-8">{{ABOUT_TITLE}}</h2>
     <p class="text-neutral-content/70 text-xl md:text-2xl leading-relaxed mb-10 font-light max-w-3xl mx-auto">{{ABOUT_TEXT}}</p>

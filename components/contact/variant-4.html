@@ -5,8 +5,14 @@
   Placeholders: {{CONTACT_TITLE}}, {{CONTACT_SUBTITLE}},
                 {{CONTACT_EMAIL}}, {{CONTACT_PHONE}}, {{CONTACT_ADDRESS}}
 ============================================================ -->
-<section id="contact" class="bg-neutral py-20 md:py-32">
-  <div class="container mx-auto max-w-5xl px-4 text-center">
+<section id="contact" class="bg-neutral py-20 md:py-32 relative overflow-hidden">
+  <!-- Oversized decorative "@" -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-neutral-content/[0.03] font-black select-none pointer-events-none leading-none" style="font-size:22rem">@</div>
+  <!-- Ring top-right -->
+  <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full border border-neutral-content/6 pointer-events-none"></div>
+  <!-- Ring bottom-left -->
+  <div class="absolute -bottom-16 -left-16 w-56 h-56 rounded-full border border-neutral-content/5 pointer-events-none"></div>
+  <div class="container mx-auto max-w-5xl px-4 text-center relative z-10">
     <p class="text-neutral-content/50 font-semibold text-sm uppercase tracking-widest mb-4">{{CONTACT_SUBTITLE}}</p>
     <h2 class="text-3xl md:text-4xl font-bold text-neutral-content mb-8">{{CONTACT_TITLE}}</h2>
     <!-- Oversized email -->

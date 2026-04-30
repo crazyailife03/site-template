@@ -7,8 +7,15 @@
 ============================================================ -->
 <section id="hero" class="flex flex-col md:flex-row min-h-[80vh] md:min-h-screen">
   <!-- Left: Dark text panel -->
-  <div class="flex-1 bg-neutral flex items-center justify-center py-16 md:py-0 px-8 md:px-16">
-    <div class="max-w-lg text-center md:text-left">
+  <div class="flex-1 bg-neutral flex items-center justify-center py-16 md:py-0 px-8 md:px-16 relative overflow-hidden">
+    <!-- Concentric ring decorations -->
+    <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full border border-neutral-content/6 pointer-events-none"></div>
+    <div class="absolute -top-12 -right-12 w-48 h-48 rounded-full border border-neutral-content/8 pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-64 h-64 rounded-full border border-neutral-content/5 pointer-events-none"></div>
+    <!-- Plus marks -->
+    <div class="absolute bottom-10 right-10 text-neutral-content/10 font-light select-none pointer-events-none text-4xl leading-none">+</div>
+    <div class="absolute top-12 left-8 text-neutral-content/6 font-light select-none pointer-events-none text-2xl leading-none">+</div>
+    <div class="max-w-lg text-center md:text-left relative z-10">
       <p class="text-neutral-content/60 font-semibold text-sm uppercase tracking-widest mb-4">{{HERO_SUBTITLE}}</p>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-neutral-content mb-6">{{HERO_TITLE}}</h1>
       <p class="text-neutral-content/70 text-lg mb-8">{{HERO_DESCRIPTION}}</p>
