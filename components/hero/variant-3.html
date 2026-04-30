@@ -1,19 +1,25 @@
 <!-- ============================================================
   Section     : Hero
   Variant     : 3
-  Layout      : Text only centered, oversized headline, no image (minimal)
+  Layout      : Oversized headline centered + showcase image below
   Placeholders: {{HERO_TITLE}}, {{HERO_SUBTITLE}}, {{HERO_DESCRIPTION}},
-                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}
-  Note        : This variant intentionally has no image
+                {{CTA_PRIMARY}}, {{CTA_SECONDARY}}, {{HERO_IMAGE}}
 ============================================================ -->
-<section id="hero" class="bg-base-200 py-24 md:py-36">
-  <div class="container mx-auto max-w-5xl px-4 text-center">
-    <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-4">{{HERO_SUBTITLE}}</p>
-    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-6">{{HERO_TITLE}}</h1>
-    <p class="text-base-content/60 text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light">{{HERO_DESCRIPTION}}</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#contact" class="btn btn-primary btn-lg px-10">{{CTA_PRIMARY}}</a>
-      <a href="#about" class="btn btn-outline btn-lg px-10">{{CTA_SECONDARY}}</a>
+<section id="hero" class="bg-base-200 py-20 md:py-28">
+  <div class="container mx-auto max-w-5xl px-4">
+    <!-- Text content -->
+    <div class="text-center mb-14">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-4">{{HERO_SUBTITLE}}</p>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-6">{{HERO_TITLE}}</h1>
+      <p class="text-base-content/60 text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light">{{HERO_DESCRIPTION}}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="btn btn-primary btn-lg px-10">{{CTA_PRIMARY}}</a>
+        <a href="#about" class="btn btn-outline btn-lg px-10">{{CTA_SECONDARY}}</a>
+      </div>
+    </div>
+    <!-- Showcase image -->
+    <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-base-content/10">
+      <img src="{{HERO_IMAGE}}" alt="{{HERO_TITLE}}" class="w-full h-[40vh] md:h-[55vh] object-cover">
     </div>
   </div>
 </section>
