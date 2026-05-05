@@ -3,7 +3,7 @@
   Variant     : 2
   Layout      : Masonry-style grid (featured large + smaller tiles)
   Placeholders: {{GALLERY_TITLE}}, {{GALLERY_SUBTITLE}},
-                {{GALLERY_1_IMAGE}} ~ {{GALLERY_6_IMAGE}},
+                {{GALLERY_IMAGE_1}} ~ {{GALLERY_IMAGE_6}},
                 {{GALLERY_1_CAPTION}} ~ {{GALLERY_6_CAPTION}}
   Note        : Use .img-placeholder class when no image is provided
 ============================================================ -->
@@ -17,39 +17,39 @@
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px]">
       <!-- Large featured item (spans 2 rows) -->
       <div class="relative group overflow-hidden rounded-xl row-span-2">
-        <img src="{{GALLERY_1_IMAGE}}" alt="{{GALLERY_1_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <img src="{{GALLERY_IMAGE_1}}" alt="{{GALLERY_1_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
           <p class="text-white text-sm font-medium">{{GALLERY_1_CAPTION}}</p>
         </div>
       </div>
       <!-- Regular items -->
       <div class="relative group overflow-hidden rounded-xl">
-        <img src="{{GALLERY_2_IMAGE}}" alt="{{GALLERY_2_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <img src="{{GALLERY_IMAGE_2}}" alt="{{GALLERY_2_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
           <p class="text-white text-sm font-medium">{{GALLERY_2_CAPTION}}</p>
         </div>
       </div>
       <div class="relative group overflow-hidden rounded-xl">
-        <img src="{{GALLERY_3_IMAGE}}" alt="{{GALLERY_3_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <img src="{{GALLERY_IMAGE_3}}" alt="{{GALLERY_3_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
           <p class="text-white text-sm font-medium">{{GALLERY_3_CAPTION}}</p>
         </div>
       </div>
       <div class="relative group overflow-hidden rounded-xl">
-        <img src="{{GALLERY_4_IMAGE}}" alt="{{GALLERY_4_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <img src="{{GALLERY_IMAGE_4}}" alt="{{GALLERY_4_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
           <p class="text-white text-sm font-medium">{{GALLERY_4_CAPTION}}</p>
         </div>
       </div>
       <!-- Second large item -->
       <div class="relative group overflow-hidden rounded-xl row-span-2 col-start-3 row-start-1 hidden md:block">
-        <img src="{{GALLERY_5_IMAGE}}" alt="{{GALLERY_5_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <img src="{{GALLERY_IMAGE_5}}" alt="{{GALLERY_5_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
           <p class="text-white text-sm font-medium">{{GALLERY_5_CAPTION}}</p>
         </div>
       </div>
       <div class="relative group overflow-hidden rounded-xl">
-        <img src="{{GALLERY_6_IMAGE}}" alt="{{GALLERY_6_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <img src="{{GALLERY_IMAGE_6}}" alt="{{GALLERY_6_CAPTION}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent">
           <p class="text-white text-sm font-medium">{{GALLERY_6_CAPTION}}</p>
         </div>
