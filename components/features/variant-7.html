@@ -5,12 +5,14 @@
   Placeholders: {{FEATURES_TITLE}}, {{FEATURES_SUBTITLE}},
                 {{FEATURE_1_ICON}} ~ {{FEATURE_4_ICON}},
                 {{FEATURE_1_TITLE}} ~ {{FEATURE_4_TITLE}},
-                {{FEATURE_1_DESC}} ~ {{FEATURE_4_DESC}}
+                {{FEATURE_1_DESC}} ~ {{FEATURE_4_DESC}},
+                {{FEATURES_DECORATION}}
   Note        : Feature 1 = hero feature (large left); Features 2-4 = right column
                 No image required
 ============================================================ -->
-<section id="features" class="bg-base-100 py-16 md:py-24">
-  <div class="container mx-auto max-w-6xl px-4">
+<section id="features" class="bg-base-100 py-16 md:py-24 relative overflow-hidden">
+  {{FEATURES_DECORATION}}
+  <div class="container mx-auto max-w-6xl px-4 relative z-10">
     <!-- Header -->
     <div class="text-center mb-12">
       <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>

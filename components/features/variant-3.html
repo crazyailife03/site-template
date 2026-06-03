@@ -6,11 +6,13 @@
                 {{FEATURE_1_ICON}} ~ {{FEATURE_3_ICON}} (used as accent emoji),
                 {{FEATURE_1_TITLE}} ~ {{FEATURE_3_TITLE}},
                 {{FEATURE_1_DESC}} ~ {{FEATURE_3_DESC}},
-                {{FEATURE_1_IMAGE}} ~ {{FEATURE_3_IMAGE}}
+                {{FEATURE_1_IMAGE}} ~ {{FEATURE_3_IMAGE}},
+                {{FEATURES_DECORATION}}
   Note        : This variant uses images per row, not icons grid
 ============================================================ -->
-<section id="features" class="bg-base-100 py-16 md:py-24">
-  <div class="container mx-auto max-w-6xl px-4">
+<section id="features" class="bg-base-100 py-16 md:py-24 relative overflow-hidden">
+  {{FEATURES_DECORATION}}
+  <div class="container mx-auto max-w-6xl px-4 relative z-10">
     <!-- Header -->
     <div class="text-center mb-16">
       <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>

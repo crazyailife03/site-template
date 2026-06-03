@@ -5,11 +5,13 @@
   Placeholders: {{FEATURES_TITLE}}, {{FEATURES_SUBTITLE}},
                 {{FEATURE_1_ICON}} ~ {{FEATURE_3_ICON}},
                 {{FEATURE_1_TITLE}} ~ {{FEATURE_3_TITLE}},
-                {{FEATURE_1_DESC}} ~ {{FEATURE_3_DESC}}
+                {{FEATURE_1_DESC}} ~ {{FEATURE_3_DESC}},
+                {{FEATURES_DECORATION}}
   Note        : Fixed 3 features, no image required. Dark premium look.
 ============================================================ -->
-<section id="features" class="bg-neutral py-16 md:py-24">
-  <div class="container mx-auto max-w-6xl px-4">
+<section id="features" class="bg-neutral py-16 md:py-24 relative overflow-hidden">
+  {{FEATURES_DECORATION}}
+  <div class="container mx-auto max-w-6xl px-4 relative z-10">
     <!-- Header -->
     <div class="text-center mb-12">
       <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>

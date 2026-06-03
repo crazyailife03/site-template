@@ -6,12 +6,14 @@
                 {{FEATURE_1_ICON}} ~ {{FEATURE_6_ICON}},
                 {{FEATURE_1_TITLE}} ~ {{FEATURE_6_TITLE}},
                 {{FEATURE_1_DESC}} ~ {{FEATURE_6_DESC}},
-                {{FEATURE_1_IMAGE}} ~ {{FEATURE_6_IMAGE}}
+                {{FEATURE_1_IMAGE}} ~ {{FEATURE_6_IMAGE}},
+                {{FEATURES_DECORATION}}
                 (items 4~6 wrapped in {{#FEATURE_4}}...{{/FEATURE_4}} block markers)
   Note        : data-tab / data-tab-content attributes trigger script.js tab switcher
 ============================================================ -->
-<section id="features" class="bg-base-100 py-16 md:py-24">
-  <div class="container mx-auto max-w-6xl px-4">
+<section id="features" class="bg-base-100 py-16 md:py-24 relative overflow-hidden">
+  {{FEATURES_DECORATION}}
+  <div class="container mx-auto max-w-6xl px-4 relative z-10">
     <!-- Header -->
     <div class="text-center mb-12">
       <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">{{FEATURES_SUBTITLE}}</p>
